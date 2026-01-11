@@ -30,6 +30,13 @@ export const metadata: Metadata = {
 
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 import { PROFILE } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 

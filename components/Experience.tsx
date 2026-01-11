@@ -15,14 +15,14 @@ export default function Experience() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="flex justify-between items-center mb-12 border-b border-white/10 pb-6">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 border-b border-white/10 pb-6 gap-4">
                         <h3 className="text-2xl font-bold text-white flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-purple-500/50"></span>
                             Experience
                         </h3>
                         <Link
                             href="/certifications"
-                            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium text-white"
+                            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium text-white whitespace-nowrap"
                         >
                             View Certifications
                             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
