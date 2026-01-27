@@ -1,6 +1,6 @@
 export const PROFILE = {
     name: "Aakash Amit Joshi",
-    role: "Python Developer | ML Projects | Building Scalable Systems",
+    role: "Python Developer | AI Engineering | Building Scalable Systems",
     about: `Computer Engineer skilled in software development, machine learning, and web technologies. 
   Experienced in full-stack application development with expertise in Python, C++, and JavaScript.`,
     philosophy: `Driven by trajectory and growth. Multidisciplinary. AI. Tooling. Infrastructure.`,
