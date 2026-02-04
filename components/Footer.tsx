@@ -1,6 +1,6 @@
 'use client';
 
-import { PROFILE } from '@/lib/data';
+import { PROFILE, SOCIALS } from '@/lib/data';
 import Socials from './Socials';
 
 export default function Footer() {
@@ -10,9 +10,9 @@ export default function Footer() {
 
                 <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Let's Connect</h2>
-                    <p className="text-gray-400 mb-6">Open to opportunities in Systems Engineering & AI Infrastructure.</p>
+                    <p className="text-gray-400 mb-6">Open to opportunities in Systems Engineering, DevOps & AI Infrastructure.</p>
                     <a
-                        href={PROFILE.socials.email}
+                        href={SOCIALS.find(s => s.id === 'email')?.url}
                         className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors"
                     >
                         Get in Touch

@@ -37,7 +37,7 @@ export const viewport = {
   userScalable: false,
 };
 
-import { PROFILE } from "@/lib/data";
+import { PROFILE, SOCIALS } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
@@ -51,11 +51,7 @@ export default function RootLayout({
     name: PROFILE.name,
     url: 'https://aakash-joshi.vercel.app',
     jobTitle: PROFILE.role,
-    sameAs: [
-      PROFILE.socials.github,
-      PROFILE.socials.linkedin,
-      PROFILE.socials.twitter
-    ].filter(Boolean),
+    sameAs: SOCIALS.map(s => s.url),
     description: PROFILE.about
   };
 

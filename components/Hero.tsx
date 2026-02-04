@@ -20,6 +20,7 @@ export default function Hero() {
     const y1 = useTransform(scrollYProgress, [0, 0.4], [0, -100]);
     const opacity1 = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
     const scale1 = useTransform(scrollYProgress, [0, 0.25], [1, 1.5]);
+    const display1 = useTransform(scrollYProgress, (pos) => (pos >= 0.25 ? 'none' : 'flex'));
 
     // Section 2: Reliable
     const y2 = useTransform(scrollYProgress, [0.1, 0.4, 0.7], [100, 0, -100]);
@@ -72,7 +73,7 @@ export default function Hero() {
 
                     {/* Section 1 */}
                     <motion.div
-                        style={{ y: y1, opacity: opacity1, scale: scale1 }}
+                        style={{ y: y1, opacity: opacity1, scale: scale1, display: display1 }}
                         className="absolute inset-0 flex flex-col items-center justify-center text-center z-30"
                     >
                         <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-2xl">
@@ -90,8 +91,8 @@ export default function Hero() {
                                 ))}
                             </div>
                         </div>
-                        <div className="pointer-events-auto">
-                            <Socials itemClassName="bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:scale-110 transition-transform" />
+                        <div className="">
+                            <Socials featuredOnly itemClassName="bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:scale-110 transition-transform" />
                         </div>
                     </motion.div>
 
@@ -129,8 +130,8 @@ export default function Hero() {
                                     <p className="text-gray-400">Integrating intelligence into applications.</p>
                                 </div>
                                 <div className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-colors">
-                                    <h3 className="text-2xl font-semibold mb-2 text-blue-300">Tooling</h3>
-                                    <p className="text-gray-400">Crafting developer experiences that matter.</p>
+                                    <h3 className="text-2xl font-semibold mb-2 text-blue-300">DevOps</h3>
+                                    <p className="text-gray-400">Streamlining delivery and operations.</p>
                                 </div>
                                 <div className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-colors">
                                     <h3 className="text-2xl font-semibold mb-2 text-cyan-300">Infrastructure</h3>

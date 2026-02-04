@@ -3,14 +3,42 @@ export const PROFILE = {
     role: "Python Developer | AI Engineering | Building Scalable Systems",
     about: `Computer Engineer skilled in software development, machine learning, and web technologies. 
   Experienced in full-stack application development with expertise in Python, C++, and JavaScript.`,
-    philosophy: `Driven by trajectory and growth. Multidisciplinary. AI. Tooling. Infrastructure.`,
-    socials: {
-        github: "https://github.com/avianage",
-        linkedin: "https://linkedin.com/in/aakash-joshi-cs/",
-        twitter: "https://twitter.com",
-        email: "mailto:aakash.joshi.cs@gmail.com",
-    },
+    philosophy: `Driven by trajectory and growth. Multidisciplinary. AI. DevOps. Infrastructure.`,
+
 };
+
+export const SOCIALS = [
+    {
+        id: "github",
+        name: "GitHub",
+        url: "https://github.com/avianage",
+        featured: true
+    },
+    {
+        id: "linkedin",
+        name: "LinkedIn",
+        url: "https://linkedin.com/in/aakash-joshi-cs/",
+        featured: true
+    },
+    {
+        id: "email",
+        name: "Email",
+        url: "mailto:aakash.joshi.cs@gmail.com",
+        featured: true
+    },
+    {
+        id: "leetcode",
+        name: "LeetCode",
+        url: "https://leetcode.com/avianage",
+        featured: true
+    },
+    {
+        id: "instagram",
+        name: "Instagram",
+        url: "https://instagram.com/aakashxjoshi",
+        featured: false
+    }
+];
 
 export const PROJECTS = [
     {

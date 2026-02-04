@@ -27,7 +27,7 @@ export default function About() {
                                 <strong className="text-white font-medium">Computer Engineer</strong> skilled in <strong className="text-white font-medium">software development</strong>, <strong className="text-white font-medium">machine learning</strong>, and <strong className="text-white font-medium">web technologies</strong>. Experienced in <strong className="text-white font-medium">full-stack</strong> application development with expertise in <strong className="text-blue-200/90 font-medium">Python, C++, and JavaScript</strong>.
                             </p>
                             <p>
-                                My work isn't just about writing code—it's about understanding the <strong className="text-white font-medium">entire stack</strong>, from hardware constraints to user experience, ensuring <strong className="text-white font-medium">reliability</strong> at every layer.
+                                My work isn't just about writing code, it's about understanding the <strong className="text-white font-medium">entire stack</strong>, from hardware constraints to user experience, ensuring <strong className="text-white font-medium">reliability</strong> at every layer.
                             </p>
                         </div>
                         <div>
