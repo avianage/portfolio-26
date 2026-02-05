@@ -142,6 +142,40 @@ export const PROJECTS = [
             keyDecisions: "Focused heavily on raw CSS flexbox and grid to build a solid foundation before moving to frameworks.",
             learnings: "Solidified core web fundamentals, specifically the box model, semantic HTML, and DOM manipulation."
         }
+    },
+    {
+        id: "sentiment-analysis",
+        title: "Sentimental Analysis",
+        year: "2024",
+        description: "AI model to analyze textual data and accurately classify emotions using Neural Networks.",
+        tags: ["Naive Bayes", "Python", "ML", "NLP"],
+        challenge: "Accurately classifying subtle emotional nuances in text.",
+        featured: true,
+        github: "https://github.com/avianage/emotion-detection-classifier",
+        image: "/projects/sentimental-analysis.png",
+        details: {
+            overview: "Built an AI model to analyze textual data and accurately classify emotions such as sadness, joy, love, anger, fear, and surprise.",
+            architecture: "Leveraged SpaCy for tokenization/preprocessing and TF-IDF for feature extraction. Trained a Multinomial Naïve Bayes classifier.",
+            keyDecisions: "Used Multinomial Naïve Bayes for its efficiency with high-dimensional text data. Achieved 85% accuracy.",
+            learnings: "Deepened understanding of NLP pipelines, text preprocessing, and evaluating classification models with precision/recall."
+        }
+    },
+    {
+        id: "movie-recommender",
+        title: "Movie Recommender",
+        year: "2023",
+        description: "Content-based movie recommendation system using the TMDB 5000 dataset.",
+        tags: ["ML", "Flask", "Python"],
+        challenge: "Handling large datasets and generating relevant recommendations efficiently.",
+        featured: false,
+        github: "https://github.com/avianage/movie-recommender-system",
+        image: "/projects/movie-recommender.png",
+        details: {
+            overview: "This system harnesses the power of the TMDB 5000 dataset to offer movie recommendations, detailed movie information, and an enjoyable movie discovery experience.",
+            architecture: "Python-based recommendation logic using cosine similarity on movie features. Served via a Flask web application.",
+            keyDecisions: "Implemented content-based filtering to provide recommendations based on movie metadata (genres, keywords, cast) rather than user history.",
+            learnings: "Gained practical experience in building recommendation engines, vectorizing text data, and deploying ML models with Flask."
+        }
     }
 ];
 
@@ -173,7 +207,7 @@ export const EDUCATION = [
         degree: "B.C.A. (Distance)",
         institution: "AMITY University",
         year: "2021 - 2024",
-        achievements: []
+        achievements: ["Second Division"]
     },
     {
         degree: "Higher Secondary Certification",
@@ -184,7 +218,7 @@ export const EDUCATION = [
     {
         degree: "Secondary School Certification",
         institution: "Vidya Niketan School",
-        year: "- 2019",
+        year: "2018 - 2019",
         achievements: ["83% in SSC"]
     }
 ];
