@@ -4,7 +4,7 @@ export const PROFILE = {
     about: `Computer Engineer skilled in software development, machine learning, and web technologies. 
   Experienced in full-stack application development with expertise in Python, C++, and JavaScript.`,
     philosophy: `Driven by trajectory and growth. Multidisciplinary. AI. DevOps. Infrastructure.`,
-    resume: "/resume/resume.pdf",
+    resume: "/resume",
 };
 
 export const SOCIALS = [

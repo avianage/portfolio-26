@@ -87,14 +87,12 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                        <a
+                        <Link
                             href={PROFILE.resume}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             className="px-5 py-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25"
                         >
                             Resume
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -142,15 +140,13 @@ export default function Navbar() {
                                     {item.name}
                                 </Link>
                             ))}
-                            <a
+                            <Link
                                 href={PROFILE.resume}
-                                target="_blank"
-                                rel="noopener noreferrer"
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="mt-4 px-8 py-3 rounded-full bg-blue-500 text-white text-xl font-bold shadow-xl shadow-blue-500/30"
                             >
                                 Resume
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 )}
