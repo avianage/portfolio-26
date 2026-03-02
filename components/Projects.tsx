@@ -38,7 +38,7 @@ export default function Projects() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 md:mb-16 tracking-tight border-b border-white/10 pb-6 flex justify-between items-center flex-wrap gap-4">
                     <div className="flex flex-col">
                         <span>Selected Works</span>
-                        <span className="text-sm font-normal text-gray-500 hidden md:inline-block">Sorted by impact & complexity</span>
+                        <span className="text-sm font-normal text-gray-400 hidden md:inline-block">Showcasing my best work</span>
                     </div>
                     <Link
                         href="/projects"

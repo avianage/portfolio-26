@@ -4,7 +4,7 @@ export const PROFILE = {
     about: `Computer Engineer skilled in software development, machine learning, and web technologies. 
   Experienced in full-stack application development with expertise in Python, C++, and JavaScript.`,
     philosophy: `Driven by trajectory and growth. Multidisciplinary. AI. DevOps. Infrastructure.`,
-
+    resume: "/resume/resume.pdf",
 };
 
 export const SOCIALS = [
@@ -41,6 +41,23 @@ export const SOCIALS = [
 ];
 
 export const PROJECTS = [
+    {
+        id: "homelab",
+        title: "Personal Homelab & Networking",
+        year: "2023 - Present",
+        description: "A dual-server infrastructure hosting private services, media, and development environments securely via Tailscale.",
+        tags: ["Proxmox", "Docker", "Tailscale", "NAS", "Self-Hosted"],
+        challenge: "Orchestrating services across multiple hardware nodes while maintaining secure remote access.",
+        featured: true,
+        github: "#",
+        image: "/projects/homelab.png",
+        details: {
+            overview: "Built a robust homelab using an old laptop (Proxmox hypervisor) and a dedicated server. Hosts a reverse proxy, password manager, NAS, media server (Jellyfin/Arr stack), and local LLMs.",
+            architecture: "Distributed system with containerized services on Proxmox and bare-metal NAS. Unified mesh network using Tailscale for end-to-end encrypted communication.",
+            keyDecisions: "Adopted Proxmox for flexible resource allocation and Docker for service isolation. Leveraged Tailscale to avoid port forwarding and expose services securely.",
+            learnings: "Deepened expertise in Linux server administration, network security, virtualization, and infrastructure-as-code principles."
+        }
+    },
     {
         id: "zenkraft",
         title: "ZenKraft - AI Yoga Assistant",
@@ -83,7 +100,7 @@ export const PROJECTS = [
         tags: ["ML", "Python", "Scikit-learn", "Pandas"],
         challenge: "Feature engineering for high-variance time-series data.",
         featured: true,
-        github: "https://github.com/avianage/energy-forecast",
+        github: "https://github.com/avianage/renewable-energy-demand-forcasting",
         image: "/projects/energy-forecast.png",
         details: {
             overview: "A machine learning project to predict electricity demand based on historical energy data, comparing multiple models for optimal performance.",
@@ -92,40 +109,40 @@ export const PROJECTS = [
             learnings: "Gained significant insight into Time Series Analysis and the trade-offs between model complexity and inference accuracy."
         }
     },
-    {
-        id: "algo_visualizer",
-        title: "Sorting Visualizer",
-        year: "2023",
-        description: "Interactive web app visualizing classic sorting algorithms with adjustable speed and data size.",
-        tags: ["React", "Algorithms", "Education"],
-        challenge: "Visualizing asynchronous state updates during rapid array manipulations.",
-        featured: false,
-        github: "https://github.com/avianage/sorting-visualizer",
-        image: "/projects/sorting-visualizer.png",
-        details: {
-            overview: "A clean and intuitive tool to help students understand sorting algorithms like Merge Sort, Quick Sort, and Bubble Sort through animation.",
-            architecture: "React-based frontend using local component state to drive animations. CSS transitions handling smooth bar movements.",
-            keyDecisions: "Used generator functions to pause execution flow, allowing for step-by-step visualization without blocking the main thread.",
-            learnings: "Improved understanding of asynchronous JavaScript and React's rendering lifecycle when handling rapid state changes."
-        }
-    },
-    {
-        id: "task_cli",
-        title: "Rust Task CLI",
-        year: "2023",
-        description: "A lightning-fast command line todo list manager written in Rust.",
-        tags: ["Rust", "CLI", "Systems"],
-        challenge: "Managing file I/O safely and efficiently in a systems language.",
-        featured: false,
-        github: "https://github.com/avianage/rust-task-cli",
-        image: "/projects/task-cli.png",
-        details: {
-            overview: "A simple, no-nonsense CLI tool for managing daily tasks. Supports prioritization, due dates, and persistent local storage.",
-            architecture: "Pure Rust using Serde for JSON serialization/deserialization of the task list.",
-            keyDecisions: "Chose a flat JSON file for storage over SQLite for portability and simplicity of manual editing if needed.",
-            learnings: "First deep dive into Rust's ownership model and error handling patterns."
-        }
-    },
+    // {
+    //     id: "algo_visualizer",
+    //     title: "Sorting Visualizer",
+    //     year: "2023",
+    //     description: "Interactive web app visualizing classic sorting algorithms with adjustable speed and data size.",
+    //     tags: ["React", "Algorithms", "Education"],
+    //     challenge: "Visualizing asynchronous state updates during rapid array manipulations.",
+    //     featured: false,
+    //     github: "https://github.com/avianage/sorting-visualizer",
+    //     image: "/projects/sorting-visualizer.png",
+    //     details: {
+    //         overview: "A clean and intuitive tool to help students understand sorting algorithms like Merge Sort, Quick Sort, and Bubble Sort through animation.",
+    //         architecture: "React-based frontend using local component state to drive animations. CSS transitions handling smooth bar movements.",
+    //         keyDecisions: "Used generator functions to pause execution flow, allowing for step-by-step visualization without blocking the main thread.",
+    //         learnings: "Improved understanding of asynchronous JavaScript and React's rendering lifecycle when handling rapid state changes."
+    //     }
+    // },
+    // {
+    //     id: "task_cli",
+    //     title: "Rust Task CLI",
+    //     year: "2023",
+    //     description: "A lightning-fast command line todo list manager written in Rust.",
+    //     tags: ["Rust", "CLI", "Systems"],
+    //     challenge: "Managing file I/O safely and efficiently in a systems language.",
+    //     featured: false,
+    //     github: "https://github.com/avianage/rust-task-cli",
+    //     image: "/projects/task-cli.png",
+    //     details: {
+    //         overview: "A simple, no-nonsense CLI tool for managing daily tasks. Supports prioritization, due dates, and persistent local storage.",
+    //         architecture: "Pure Rust using Serde for JSON serialization/deserialization of the task list.",
+    //         keyDecisions: "Chose a flat JSON file for storage over SQLite for portability and simplicity of manual editing if needed.",
+    //         learnings: "First deep dive into Rust's ownership model and error handling patterns."
+    //     }
+    // },
     {
         id: "portfolio_v1",
         title: "Legacy Portfolio",
@@ -134,7 +151,7 @@ export const PROJECTS = [
         tags: ["HTML/CSS", "JavaScript", "Design"],
         challenge: "Implementing responsive design without modern frameworks.",
         featured: false,
-        github: "https://github.com/avianage/portfolio-v1",
+        github: "https://github.com/avianage/portfolio-website",
         image: "/projects/portfolio-v1.png",
         details: {
             overview: "The humble beginnings of my web development journey. A static site showcasing early projects.",
@@ -150,7 +167,7 @@ export const PROJECTS = [
         description: "AI model to analyze textual data and accurately classify emotions using Neural Networks.",
         tags: ["Naive Bayes", "Python", "ML", "NLP"],
         challenge: "Accurately classifying subtle emotional nuances in text.",
-        featured: true,
+        featured: false,
         github: "https://github.com/avianage/emotion-detection-classifier",
         image: "/projects/sentimental-analysis.png",
         details: {
@@ -266,12 +283,12 @@ export const CERTIFICATIONS = [
         image: "/certs/intro_prog.png"
     },
     {
-        title: "Linux",
+        title: "Linux Training",
         issuer: "Spoken Tutorial, IIT Bombay",
         year: "2025",
         link: "#",
         domain: "Fundamentals",
-        image: "/certs/linux.png",
+        image: "/certs/linux-iitb.png",
         score: "76.67%"
     },
     {
@@ -281,6 +298,39 @@ export const CERTIFICATIONS = [
         link: "https://www.kaggle.com/learn/certification/avianage/python",
         domain: "Fundamentals",
         image: "/certs/python.png"
+    },
+    {
+        title: "Cyber Security and Ethical Hacking",
+        issuer: "Institute for Design of Electrical Measuring Instruments",
+        year: "2021",
+        link: "#",
+        domain: "Cyber Security",
+        image: "/certs/cs-eh.jpg"
+    },
+    {
+        title: "Fundamentals of Deep Learning",
+        issuer: "NVIDIA Deep Learning Institute",
+        year: "2022",
+        link: "#",
+        domain: "DL",
+        image: "/certs/fdl.jpg"
+    },
+    {
+        title: "GIMP Training",
+        issuer: "Spoken Tutorial",
+        year: "2022",
+        link: "#",
+        domain: "Tools",
+        image: "/certs/gimp-iitb.jpg"
+    },
+    {
+        title: "LATEX Training",
+        issuer: "Spoken Tutorial",
+        year: "2023",
+        link: "#",
+        domain: "Tools",
+        image: "/certs/latex-iitb.jpg",
+        score: "73.33%"
     }
 ];
 
