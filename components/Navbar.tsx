@@ -47,7 +47,7 @@ export default function Navbar() {
         const sectionId = href.split('#')[1];
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'auto' });
+            element.scrollIntoView({ behavior: 'smooth' });
             setMobileMenuOpen(false);
         }
     };
@@ -67,7 +67,7 @@ export default function Navbar() {
                         onClick={(e) => {
                             if (pathname === '/') {
                                 e.preventDefault();
-                                window.scrollTo({ top: 0, behavior: 'auto' });
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
                             }
                         }}
                         className="text-xl font-bold tracking-tighter text-white z-50 relative"

@@ -17,12 +17,10 @@ export default function Certifications({ items }: { items: CertItem[] }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {items.map((cert, i) => (
                     <motion.div
-                        layout
                         key={cert.title}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.2 }}
                         className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 hover:bg-white/10 transition-all flex flex-col h-full"
                     >
                         <div className="relative w-full aspect-[16/10] mb-6 rounded-xl overflow-hidden bg-black/40 border border-white/5 group-hover:border-blue-500/20 transition-colors">

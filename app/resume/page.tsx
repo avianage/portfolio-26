@@ -57,7 +57,7 @@ export default function ResumePage() {
                     className="w-full bg-white rounded-xl shadow-2xl overflow-hidden relative aspect-[1/1.414]"
                 >
                     <Image
-                        src="/resume.png"
+                        src={PROFILE.resumeLink}
                         alt={`${PROFILE.name} Resume`}
                         fill
                         className="object-contain"
@@ -73,7 +73,7 @@ export default function ResumePage() {
                     className="mt-12 flex justify-center"
                 >
                     <a
-                        href="/resume.png"
+                        href={PROFILE.resumeLink}
                         download="Aakash_Joshi_Resume.png"
                         className="px-8 py-4 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/25 flex items-center gap-2"
                     >

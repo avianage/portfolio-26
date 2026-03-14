@@ -15,8 +15,8 @@ export default function Experience() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true, margin: "-5%" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 gap-6">
                         <div>
@@ -41,11 +41,10 @@ export default function Experience() {
                         {EXPERIENCE.map((item, i) => (
                             <motion.div
                                 key={i}
-                                layout
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
+                                transition={{ delay: i * 0.05, duration: 0.4 }}
                                 onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
                                 className={`group relative p-6 md:p-8 rounded-2xl border transition-all cursor-pointer ${
                                     expandedIndex === i 

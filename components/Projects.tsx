@@ -57,10 +57,9 @@ export default function Projects() {
                             layoutId={`card-${project.id}`}
                             onClick={() => setSelectedId(project.id)}
                             key={project.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.2 }}
                             className={`cursor-pointer group relative p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-md overflow-hidden flex flex-col ${i === arr.length - 1 && arr.length % 2 !== 0
                                 ? 'md:col-span-2 md:mx-auto md:w-[calc(50%-1rem)]'
                                 : ''

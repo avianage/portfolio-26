@@ -42,6 +42,7 @@ export default function Leadership() {
                                     src={item.images[0] || "/leadership/placeholder.png"}
                                     alt={item.organization}
                                     fill
+                                    unoptimized
                                     className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
