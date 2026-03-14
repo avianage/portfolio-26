@@ -1,0 +1,9 @@
+[phases.setup]
+nixPkgs = ["...", "nodejs_20"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[variables]
+NODE_OPTIONS = "--max-old-space-size=2048"
+NODE_ENV = "production"
