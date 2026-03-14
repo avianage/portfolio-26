@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import Socials from './Socials';
-import { PROFILE } from '@/lib/data';
+import { PROFILE, FOCUS_AREAS } from '@/lib/data';
 
 function useParallax(value: MotionValue<number>, distance: number) {
     return useTransform(value, [0, 1], [0, -distance]);
@@ -125,18 +125,12 @@ export default function Hero() {
                                 Multidisciplinary.
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
-                                <div className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-colors">
-                                    <h3 className="text-2xl font-semibold mb-2 text-purple-300">AI</h3>
-                                    <p className="text-gray-400">Integrating intelligence into applications.</p>
-                                </div>
-                                <div className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-colors">
-                                    <h3 className="text-2xl font-semibold mb-2 text-blue-300">DevOps</h3>
-                                    <p className="text-gray-400">Streamlining delivery and operations.</p>
-                                </div>
-                                <div className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-colors">
-                                    <h3 className="text-2xl font-semibold mb-2 text-cyan-300">Infrastructure</h3>
-                                    <p className="text-gray-400">Scalable, resilient foundation engineering.</p>
-                                </div>
+                                {FOCUS_AREAS.map((area, index) => (
+                                    <div key={index} className="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-colors">
+                                        <h3 className={`text-2xl font-semibold mb-2 ${area.color}`}>{area.title}</h3>
+                                        <p className="text-gray-400">{area.description}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </motion.div>

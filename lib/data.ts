@@ -1,11 +1,49 @@
 export const PROFILE = {
-    name: "Aakash Amit Joshi",
+    name: "Aakash Joshi",
     role: "Python Developer | AI Engineering | Building Scalable Systems",
-    about: `Computer Engineer skilled in software development, machine learning, and web technologies. 
-  Experienced in full-stack application development with expertise in Python, C++, and JavaScript.`,
-    philosophy: `Driven by trajectory and growth. Multidisciplinary. AI. DevOps. Infrastructure.`,
     resume: "/resume",
+    resumeLink: "/resume.png"
 };
+
+export const ABOUT = {
+    label: "01. PHILOSOPHY",
+    title: {
+        faded: "I approach engineering with a ",
+        highlight: "systems-first mindset."
+    },
+    description: [
+        {
+            paragraphs: [
+                "**Computer Engineer** skilled in **software development**, **machine learning**, and **web technologies**. Experienced in **full-stack** application development with expertise in ^^Python, C++, and JavaScript^^.",
+                "My work isn't just about writing code, it's about understanding the **entire stack**, from hardware constraints to user experience, ensuring **reliability** at every layer."
+            ]
+        },
+        {
+            paragraphs: [
+                "Driven by **trajectory and growth**. **Multidisciplinary**. ^^AI. DevOps. Infrastructure.^^",
+                "Whether it's optimizing data pipelines or designing intuitive developer tools, I focus on creating value through **precision and performance**."
+            ]
+        }
+    ]
+};
+
+export const FOCUS_AREAS = [
+    {
+        title: "AI",
+        description: "Integrating intelligence into applications.",
+        color: "text-purple-300"
+    },
+    {
+        title: "DevOps",
+        description: "Streamlining delivery and operations.",
+        color: "text-blue-300"
+    },
+    {
+        title: "Infrastructure",
+        description: "Scalable, resilient foundation engineering.",
+        color: "text-cyan-300"
+    }
+];
 
 export const SOCIALS = [
     {
@@ -198,18 +236,37 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
     {
+        role: "Full Stack Developer Intern",
+        company: "Averlon Enterprise Solutions Private Limited",
+        year: "March 2026 - Present",
+        logo: "/logos/averlon.png",
+        points: [
+            "Contributing to the development of a core billing management system.",
+            "Working on full-stack features using modern web technologies.",
+            "Collaborating with senior engineers to implement scalable architecture."
+        ]
+    },
+    {
         role: "Machine Learning Intern",
         company: "Tata Consulting Engineers Ltd.",
         year: "Dec 2023 - Jan 2024",
         logo: "/logos/tce.png",
-        description: "Predictive maintenance project for industrial motors using Time Series Analysis and Random Forest."
+        points: [
+            "Developed predictive maintenance models using Python, Pandas, and scikit-learn on industrial datasets.",
+            "Applied feature engineering and exploratory modeling to improve system efficiency and reliability.",
+            "Collaborated on scalable data pipelines, ensuring clean and structured data flow for analytics."
+        ]
     },
     {
         role: "Web Development Intern",
         company: "TechEntrepreneurs",
-        year: "Feb 2023 - Jul 2023",
+        year: "Feb 2023 - Apr 2023",
         logo: "/logos/techentre.png",
-        description: "Developed a job portal interface with PHP/MySQL, implementing user login and database-backed attributes."
+        points: [
+            "Developed and enhanced frontend features for a job portal using HTML, CSS, JavaScript, and PHP.",
+            "Implemented dynamic user interfaces for job listings, authentication forms, and profile management.",
+            "Participated in team development workflow using Git and version control practices."
+        ]
     }
 ];
 
@@ -249,6 +306,15 @@ export const CERTIFICATIONS = [
         domain: "Tools",
         image: "/certs/git-iitb.png",
         score: "73.33%"
+    },
+    {
+        title: "Introduction to Machine Learning",
+        issuer: "NPTEL Online Certification",
+        year: "2024",
+        link: "#",
+        domain: "AI/ML",
+        image: "/certs/nptel-introML.png",
+        score: "76%"
     },
     {
         title: "Intro to AI Ethics",
@@ -337,7 +403,7 @@ export const CERTIFICATIONS = [
 export const LEADERSHIP = [
     {
         organization: "Class Representative, Computer Engineering Department",
-        period: "2021 – July 2025",
+        period: "2021 – 2025",
         roles: [
             {
                 title: "Class Representative",

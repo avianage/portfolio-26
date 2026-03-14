@@ -37,7 +37,7 @@ export const viewport = {
   userScalable: false,
 };
 
-import { PROFILE, SOCIALS } from "@/lib/data";
+import { PROFILE, SOCIALS, ABOUT } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
@@ -45,6 +45,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Strip styling markers for SEO description
+  const cleanDescription = ABOUT.description[0].paragraphs[0].replace(/[\*\^]{2}/g, '');
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -52,7 +55,7 @@ export default function RootLayout({
     url: 'https://aakash-joshi.vercel.app',
     jobTitle: PROFILE.role,
     sameAs: SOCIALS.map(s => s.url),
-    description: PROFILE.about
+    description: cleanDescription
   };
 
   return (

@@ -54,13 +54,14 @@ export default function ResumePage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="w-full bg-white rounded-xl shadow-2xl overflow-hidden"
+                    className="w-full bg-white rounded-xl shadow-2xl overflow-hidden relative aspect-[1/1.414]"
                 >
-                    <img
-                        src="/resume.jpg"
+                    <Image
+                        src="/resume.png"
                         alt={`${PROFILE.name} Resume`}
-                        className="w-full h-auto block"
-                        loading="eager"
+                        fill
+                        className="object-contain"
+                        priority
                     />
                 </motion.div>
 
@@ -72,8 +73,8 @@ export default function ResumePage() {
                     className="mt-12 flex justify-center"
                 >
                     <a
-                        href="/resume.jpg"
-                        download="Aakash_Joshi_Resume.jpg"
+                        href="/resume.png"
+                        download="Aakash_Joshi_Resume.png"
                         className="px-8 py-4 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/25 flex items-center gap-2"
                     >
                         <svg

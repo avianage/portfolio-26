@@ -36,7 +36,10 @@ export default function Certifications({ items }: { items: CertItem[] }) {
                                 src={cert.image || "/certs/placeholder.png"}
                                 alt={cert.title}
                                 fill
-                                className="object-contain group-hover:scale-105 transition-transform duration-500"
+                                priority={i < 3}
+                                unoptimized
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute top-3 left-3 px-2 py-1 text-[10px] uppercase font-bold tracking-tight bg-blue-600/80 text-white rounded">
                                 {cert.domain}
