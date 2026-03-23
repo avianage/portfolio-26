@@ -241,9 +241,9 @@ export const EXPERIENCE = [
         year: "March 2026 - Present",
         logo: "/logos/averlon.png",
         points: [
-            "Contributing to the development of a core billing management system.",
-            "Working on full-stack features using modern web technologies.",
-            "Collaborating with senior engineers to implement scalable architecture."
+            "Building a multi-tenant SaaS Billing Management System from scratch using Node.js, Express, React (Vite), and PostgreSQL.",
+            "Designed normalized relational schema supporting tenant isolation, subscription plans, and invoice lifecycle management.",
+            "Developed RESTful APIs for billing operations including plan management, usage tracking, and payment workflows."
         ]
     },
     {
