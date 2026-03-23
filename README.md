@@ -2,8 +2,6 @@
 
 A high-performance, dark-themed personal portfolio built to showcase my experience in systems engineering, full-stack development, and machine learning.
 
-![Portfolio Preview](/public/projects/portfolio-v1.png) *(Note: Replace with actual screenshot of this portfolio!)*
-
 ## 🚀 Tech Stack
 
 - **Framework:** [Next.js 14+](https://nextjs.org/) (App Router)

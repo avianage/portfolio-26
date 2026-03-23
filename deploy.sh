@@ -2,7 +2,7 @@
 set -e
 
 # Ensure we're in the right directory
-cd "$(dirname "$0")"
+cd /home/avianage/projects/portfolio-aakash
 
 echo "▶ Pulling latest code..."
 git pull origin main
