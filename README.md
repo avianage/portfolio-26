@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aakash Joshi | Personal Portfolio
 
-## Getting Started
+A high-performance, dark-themed personal portfolio built to showcase my experience in systems engineering, full-stack development, and machine learning.
 
-First, run the development server:
+![Portfolio Preview](/public/projects/portfolio-v1.png) *(Note: Replace with actual screenshot of this portfolio!)*
+
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js 14+](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** Custom SVG & Font integration
+- **Deployment:** Docker (Self-hosted)
+
+## 🧠 What's Inside?
+
+The portfolio is driven by the dynamic data configuration in `lib/data.ts` and highlights my "systems-first mindset". It includes:
+
+1. **About/Philosophy:** My multidisciplinary approach to engineering across AI, DevOps, and Infrastructure.
+2. **Projects Archive:**
+    - **Personal Homelab:** Proxmox hypervisor, Tailscale mesh network, and Docker services.
+    - **ZenKraft:** An AI Yoga Assistant utilizing OpenCV and MediaPipe.
+    - **EchoDeck:** A real-time collaborative streaming SaaS using WebSockets.
+    - **ML Models:** Renewable Energy Forecasting, Sentiment Analysis, and Movie Recommending systems.
+3. **Experience & Education:** Details about my internships at Averlon Enterprise Solutions, Tata Consulting Engineers, and TechEntrepreneurs, along with my B.E. at Pune University.
+4. **Certifications & Leadership:** Extensive training records from NPTEL, Kaggle, IBM, and NVIDIA, alongside my roles as a Class Representative and Web Team Lead.
+
+## 🛠️ Local Development
+
+First, install the dependencies:
+
+```bash
+npm install
+# or yarn install / pnpm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# or yarn dev / pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `app/page.tsx` or updating the data in `lib/data.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🐳 Docker Deployment (Self-Hosted)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project includes built-in configurations for deploying via Docker. To deploy this app on your own server or locally:
 
-## Learn More
+1. Clone or pull the latest changes from this repository.
+2. Run one of the provided deployment scripts depending on your OS.
 
-To learn more about Next.js, take a look at the following resources:
+### For Linux / macOS (Bash)
+```bash
+# Make the script executable first (one-time)
+chmod +x deploy.sh
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run the deployment
+./deploy.sh
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### For Windows (PowerShell)
+```powershell
+.\deploy.ps1
+```
 
-## Deploy on Vercel
+Both scripts will automatically:
+- Pull the latest code from the `main` branch.
+- Build the `portfolio-aakash` Docker image.
+- Stop and remove any existing `portfolio-aakash-container`.
+- Start the new container on port `3000` in detached mode.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Your app will then be accessible at `http://localhost:3000`.
