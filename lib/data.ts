@@ -236,9 +236,17 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
     {
+        role: "Associate Systems Engineer",
+        company: "IBM India",
+        year: "May 2026 - Present",
+        logo: "/logos/IBM.png",
+        points: [
+        ]
+    },
+    {
         role: "Full Stack Developer Intern",
         company: "Averlon Enterprise Solutions Private Limited",
-        year: "March 2026 - Present",
+        year: "March 2026 - May 2026",
         logo: "/logos/averlon.png",
         points: [
             "Building a multi-tenant SaaS Billing Management System from scratch using Node.js, Express, React (Vite), and PostgreSQL.",
