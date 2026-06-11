@@ -241,6 +241,7 @@ export const EXPERIENCE = [
         year: "May 2026 - Present",
         logo: "/logos/IBM.png",
         points: [
+            "Completing IBM's 7-week Cloud Full Stack Developer training track covering Core Java, Spring Boot, Microservices, Docker, Kubernetes, CI/CD with Jenkins, Angular, React, Node.js, MongoDB, and SQL, applied across hands-on project builds."
         ]
     },
     {
