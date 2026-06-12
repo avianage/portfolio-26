@@ -4,7 +4,8 @@ WORKDIR /app
 
 # Copy package files and install dependencies
 COPY package.json package-lock.json ./
-RUN npm ci
+ENV NODE_OPTIONS="--dns-result-order=ipv4first"
+RUN for i in $(seq 1 5); do npm install --no-audit --no-fund --ignore-scripts && exit 0; echo "Retry $i/5..."; sleep 5; done; exit 1
 
 # Copy the rest of the application
 COPY . .
