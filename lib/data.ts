@@ -2,7 +2,7 @@ export const PROFILE = {
     name: "Aakash Joshi",
     role: "Python Developer | AI Engineering | Building Scalable Systems",
     resume: "/resume",
-    resumeLink: "/resume/resume.png"
+    resumeLink: "/resume/resume.jpg?v=3"
 };
 
 export const ABOUT = {

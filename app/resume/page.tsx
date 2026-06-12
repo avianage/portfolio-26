@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { PROFILE } from '@/lib/data';
 
 export default function ResumePage() {
@@ -56,12 +55,10 @@ export default function ResumePage() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="w-full bg-white rounded-xl shadow-2xl overflow-hidden relative aspect-[1/1.414]"
                 >
-                    <Image
+                    <img
                         src={PROFILE.resumeLink}
                         alt={`${PROFILE.name} Resume`}
-                        fill
-                        className="object-contain"
-                        priority
+                        className="w-full h-full object-contain"
                     />
                 </motion.div>
 
