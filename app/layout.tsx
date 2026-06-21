@@ -16,16 +16,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aakash Joshi | Systems Engineer",
     description: "Building reliable, high-performance systems. AI, Tooling & Infrastructure.",
-    url: "https://aakash-joshi.vercel.app", // Placeholder, user can update
+    url: "https://aakash-joshi.vercel.app",
     siteName: "Aakash Joshi Portfolio",
     locale: 'en_US',
     type: 'website',
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Aakash Joshi Portfolio" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Aakash Joshi | Systems Engineer",
     description: "High-performance systems engineering portfolio.",
-    creator: "@avianage", // Assuming handle from github/context or placeholder
+    creator: "@avianage",
+    images: ["/og-image.png"],
   },
 
 };
@@ -59,7 +61,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" style={{ scrollBehavior: 'smooth' }}>
       <body className={`${inter.variable} antialiased bg-[#121212] text-white font-sans`}>
         <script
           type="application/ld+json"

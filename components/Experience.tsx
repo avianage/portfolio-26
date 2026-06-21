@@ -12,12 +12,7 @@ export default function Experience() {
     return (
         <section id="experience" className="relative z-20 py-24 px-6 md:px-12 bg-[#121212] border-t border-white/5">
             <div className="max-w-4xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-5%" }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                >
+                <div>
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 gap-6">
                         <div>
                             <h3 className="text-3xl font-bold text-white flex items-center gap-4 mb-2">
@@ -39,12 +34,8 @@ export default function Experience() {
 
                     <div className="flex flex-col gap-6">
                         {EXPERIENCE.map((item, i) => (
-                            <motion.div
+                            <div
                                 key={i}
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.05, duration: 0.4 }}
                                 onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
                                 className={`group relative p-6 md:p-8 rounded-2xl border transition-all cursor-pointer ${
                                     expandedIndex === i 
@@ -114,10 +105,10 @@ export default function Experience() {
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -77,16 +77,22 @@ export default function Navbar() {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-8">
-                        {NAV_ITEMS.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                onClick={(e) => scrollToSection(e, item.href)}
-                                className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        {NAV_ITEMS.map((item) => {
+                            const isActive = !item.href.startsWith('/#') && pathname === item.href;
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    onClick={(e) => scrollToSection(e, item.href)}
+                                    className={`text-sm font-medium transition-colors relative group ${isActive ? 'text-white' : 'text-gray-400 hover:text-white'}`}
+                                >
+                                    {item.name}
+                                    {isActive && (
+                                        <span className="absolute -bottom-1 left-0 w-full h-px bg-blue-500 rounded-full" />
+                                    )}
+                                </Link>
+                            );
+                        })}
                         <Link
                             href={PROFILE.resume}
                             className="px-5 py-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25"
@@ -130,16 +136,19 @@ export default function Navbar() {
                         className="fixed inset-0 z-40 bg-[#121212] flex flex-col items-center justify-center md:hidden"
                     >
                         <div className="flex flex-col items-center gap-8">
-                            {NAV_ITEMS.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    onClick={(e) => scrollToSection(e, item.href)}
-                                    className="text-2xl font-bold text-gray-300 hover:text-white transition-colors"
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
+                            {NAV_ITEMS.map((item) => {
+                                const isActive = !item.href.startsWith('/#') && pathname === item.href;
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        onClick={(e) => scrollToSection(e, item.href)}
+                                        className={`text-2xl font-bold transition-colors ${isActive ? 'text-white' : 'text-gray-300 hover:text-white'}`}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                );
+                            })}
                             <Link
                                 href={PROFILE.resume}
                                 onClick={() => setMobileMenuOpen(false)}

@@ -1,3 +1,12 @@
+export const SKILLS = [
+    { category: "Languages",      items: ["Python", "JavaScript", "TypeScript", "C++", "Java", "SQL"] },
+    { category: "Frameworks",     items: ["React", "Next.js", "Node.js", "Express", "Flask", "Angular", "Spring Boot"] },
+    { category: "AI / ML",        items: ["scikit-learn", "TensorFlow", "SpaCy", "Pandas", "XGBoost", "OpenCV", "MediaPipe"] },
+    { category: "DevOps & Infra", items: ["Docker", "Kubernetes", "Proxmox", "Linux", "CI/CD", "Tailscale"] },
+    { category: "Databases",      items: ["PostgreSQL", "MongoDB", "SQLite"] },
+    { category: "Tools",          items: ["Git", "GitHub", "LaTeX", "GIMP", "WebSockets", "REST APIs"] },
+];
+
 export const PROFILE = {
     name: "Aakash Joshi",
     role: "Python Developer | AI Engineering | Building Scalable Systems",
@@ -313,6 +322,7 @@ export const CERTIFICATIONS = [
         year: "2024",
         link: "#",
         domain: "Tools",
+        platform: "Spoken Tutorial",
         image: "/certs/git-iitb.png",
         score: "73.33%"
     },
@@ -322,6 +332,7 @@ export const CERTIFICATIONS = [
         year: "2024",
         link: "#",
         domain: "AI/ML",
+        platform: "NPTEL",
         image: "/certs/nptel-introML.png",
         score: "76%"
     },
@@ -331,6 +342,7 @@ export const CERTIFICATIONS = [
         year: "2023",
         link: "https://www.kaggle.com/learn/certification/avianage/intro-to-ai-ethics",
         domain: "AI/ML",
+        platform: "Kaggle",
         image: "/certs/intro_ai.png"
     },
     {
@@ -339,6 +351,7 @@ export const CERTIFICATIONS = [
         year: "2023",
         link: "https://www.kaggle.com/learn/certification/avianage/intro-to-machine-learning",
         domain: "AI/ML",
+        platform: "Kaggle",
         image: "/certs/intro_ml.png"
     },
     {
@@ -347,6 +360,7 @@ export const CERTIFICATIONS = [
         year: "2024",
         link: "https://coursera.org/share/36c15ecc77fc7de2d33de5b75d193951",
         domain: "AI/ML",
+        platform: "Coursera",
         image: "/certs/ibm-ai.png"
     },
     {
@@ -355,6 +369,7 @@ export const CERTIFICATIONS = [
         year: "2023",
         link: "https://www.kaggle.com/learn/certification/avianage/intro-to-programming",
         domain: "Fundamentals",
+        platform: "Kaggle",
         image: "/certs/intro_prog.png"
     },
     {
@@ -363,6 +378,7 @@ export const CERTIFICATIONS = [
         year: "2025",
         link: "#",
         domain: "Fundamentals",
+        platform: "Spoken Tutorial",
         image: "/certs/linux-iitb.png",
         score: "76.67%"
     },
@@ -372,6 +388,7 @@ export const CERTIFICATIONS = [
         year: "2023",
         link: "https://www.kaggle.com/learn/certification/avianage/python",
         domain: "Fundamentals",
+        platform: "Kaggle",
         image: "/certs/python.png"
     },
     {
@@ -380,6 +397,7 @@ export const CERTIFICATIONS = [
         year: "2021",
         link: "#",
         domain: "Cyber Security",
+        platform: "Others",
         image: "/certs/cs-eh.jpg"
     },
     {
@@ -388,6 +406,7 @@ export const CERTIFICATIONS = [
         year: "2022",
         link: "#",
         domain: "DL",
+        platform: "NVIDIA",
         image: "/certs/fdl.jpg"
     },
     {
@@ -396,6 +415,7 @@ export const CERTIFICATIONS = [
         year: "2022",
         link: "#",
         domain: "Tools",
+        platform: "Spoken Tutorial",
         image: "/certs/gimp-iitb.jpg"
     },
     {
@@ -404,6 +424,7 @@ export const CERTIFICATIONS = [
         year: "2023",
         link: "#",
         domain: "Tools",
+        platform: "Spoken Tutorial",
         image: "/certs/latex-iitb.jpg",
         score: "73.33%"
     }

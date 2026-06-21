@@ -1,6 +1,3 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { PROFILE } from '@/lib/data';
 
@@ -8,90 +5,55 @@ export default function ResumePage() {
     return (
         <main className="min-h-screen bg-[#121212] pt-28 pb-12 px-6 md:px-12">
             <div className="max-w-5xl mx-auto">
-                {/* Header/Navigation */}
+                {/* Header */}
                 <div className="flex items-center justify-between mb-8">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
+                    <Link
+                        href="/"
+                        className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                     >
-                        <Link
-                            href="/"
-                            className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="group-hover:-translate-x-1 transition-transform"
-                            >
-                                <path d="m15 18-6-6 6-6" />
-                            </svg>
-                            Back to Home
-                        </Link>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <h1 className="text-2xl font-bold text-white">
-                            Resume<span className="text-blue-400">.</span>
-                        </h1>
-                    </motion.div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                        Back to Home
+                    </Link>
+                    <h1 className="text-2xl font-bold text-white">
+                        Resume<span className="text-blue-400">.</span>
+                    </h1>
                 </div>
 
                 {/* Resume Image */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="w-full bg-white rounded-xl shadow-2xl overflow-hidden relative aspect-[1/1.414]"
-                >
+                <div className="w-full bg-white rounded-xl shadow-2xl overflow-hidden relative aspect-[1/1.414]">
                     <img
                         src={PROFILE.resumeLink}
                         alt={`${PROFILE.name} Resume`}
                         className="w-full h-full object-contain"
                     />
-                </motion.div>
+                </div>
 
-                {/* Download Button (Optional but useful) */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    className="mt-12 flex justify-center"
-                >
+                {/* Actions */}
+                <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a
+                        href={PROFILE.resumeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white/10 border border-white/10 hover:bg-white/20 text-white font-semibold transition-all hover:scale-105 active:scale-95"
+                    >
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        View Full Size
+                    </a>
                     <a
                         href={PROFILE.resumeLink}
                         download="Aakash_Joshi_Resume.png"
-                        className="px-8 py-4 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/25 flex items-center gap-2"
+                        className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/25"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" x2="12" y1="15" y2="3" />
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
                         Download Resume
                     </a>
-                </motion.div>
+                </div>
             </div>
         </main>
     );

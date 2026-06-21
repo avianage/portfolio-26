@@ -11,6 +11,7 @@ export default function ProjectsPage() {
     const [sortBy, setSortBy] = useState<'alpha' | 'date'>('date');
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(9);
+    const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
         const updateItemsPerPage = () => {
@@ -38,6 +39,14 @@ export default function ProjectsPage() {
             projects = projects.filter(p => p.tags.includes(selectedTag));
         }
 
+        if (searchQuery.trim()) {
+            const q = searchQuery.toLowerCase();
+            projects = projects.filter(p =>
+                p.title.toLowerCase().includes(q) ||
+                p.tags.some(t => t.toLowerCase().includes(q))
+            );
+        }
+
         if (sortBy === 'alpha') {
             projects.sort((a, b) => a.title.localeCompare(b.title));
         } else {
@@ -46,7 +55,7 @@ export default function ProjectsPage() {
         }
 
         return projects;
-    }, [selectedTag, sortBy]);
+    }, [selectedTag, sortBy, searchQuery]);
 
     const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
     const paginatedProjects = useMemo(() => {
@@ -57,11 +66,35 @@ export default function ProjectsPage() {
     // Reset to page 1 when filters change
     useEffect(() => {
         setCurrentPage(1);
-    }, [selectedTag, sortBy]);
+    }, [selectedTag, sortBy, searchQuery]);
 
     return (
         <main className="min-h-screen bg-[#121212] text-white pt-28 p-6 md:p-12 lg:p-24">
             <div className="max-w-7xl mx-auto">
+                {/* Search */}
+                <div className="relative mb-8">
+                    <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                    </svg>
+                    <input
+                        type="text"
+                        placeholder="Search projects..."
+                        value={searchQuery}
+                        onChange={e => setSearchQuery(e.target.value)}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 transition-colors"
+                    />
+                    {searchQuery && (
+                        <button
+                            onClick={() => setSearchQuery('')}
+                            className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                        >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    )}
+                </div>
+
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
                     <div>
@@ -206,12 +239,12 @@ export default function ProjectsPage() {
 
                     {paginatedProjects.length === 0 && (
                         <div className="col-span-full py-24 text-center">
-                            <p className="text-gray-500">No projects found with tag "{selectedTag}"</p>
+                            <p className="text-gray-500">No projects match your search.</p>
                             <button
-                                onClick={() => setSelectedTag(null)}
+                                onClick={() => { setSelectedTag(null); setSearchQuery(''); }}
                                 className="mt-4 text-blue-400 hover:underline"
                             >
-                                Clear filter
+                                Clear filters
                             </button>
                         </div>
                     )}
