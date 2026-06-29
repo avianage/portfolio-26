@@ -1,10 +1,10 @@
 export const SKILLS = [
-    { category: "Languages",      items: ["Python", "JavaScript", "TypeScript", "C++", "Java", "SQL"] },
-    { category: "Frameworks",     items: ["React", "Next.js", "Node.js", "Express", "Flask", "Angular", "Spring Boot"] },
-    { category: "AI / ML",        items: ["scikit-learn", "TensorFlow", "SpaCy", "Pandas", "XGBoost", "OpenCV", "MediaPipe"] },
+    { category: "Languages", items: ["Python", "JavaScript", "TypeScript", "C++", "Java", "SQL"] },
+    { category: "Frameworks", items: ["React", "Next.js", "Node.js", "Express", "Flask", "Angular", "Spring Boot"] },
+    { category: "AI / ML", items: ["scikit-learn", "TensorFlow", "SpaCy", "Pandas", "XGBoost", "OpenCV", "MediaPipe"] },
     { category: "DevOps & Infra", items: ["Docker", "Kubernetes", "Proxmox", "Linux", "CI/CD", "Tailscale"] },
-    { category: "Databases",      items: ["PostgreSQL", "MongoDB", "SQLite"] },
-    { category: "Tools",          items: ["Git", "GitHub", "LaTeX", "GIMP", "WebSockets", "REST APIs"] },
+    { category: "Databases", items: ["PostgreSQL", "MongoDB", "SQLite"] },
+    { category: "Tools", items: ["Git", "GitHub", "LaTeX", "GIMP", "WebSockets", "REST APIs"] },
 ];
 
 export const PROFILE = {
@@ -361,7 +361,7 @@ export const CERTIFICATIONS = [
         link: "https://coursera.org/share/36c15ecc77fc7de2d33de5b75d193951",
         domain: "AI/ML",
         platform: "Coursera",
-        image: "/certs/ibm-ai.png"
+        image: "/certs/coursera-ibm-ai.png"
     },
     {
         title: "Intro to Programming",
@@ -427,7 +427,77 @@ export const CERTIFICATIONS = [
         platform: "Spoken Tutorial",
         image: "/certs/latex-iitb.jpg",
         score: "73.33%"
-    }
+    },
+    {
+        title: "Business Etiquette - The Polished Professinal",
+        issuer: "Udemy",
+        year: "2026",
+        link: "https://www.udemy.com/certificate/UC-9fcacc1e-564c-474d-bb21-0877a83074d2/",
+        domain: "Soft Skills",
+        platform: "Udemy",
+        image: "/certs/udemy-business-etiquette.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Core Training 2026",
+        issuer: "IBM",
+        year: "2026",
+        link: "",
+        domain: "Fundamentals",
+        platform: "IBM",
+        image: "/certs/ibm-core-training.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Role Based Cyber Security Training",
+        issuer: "IBM",
+        year: "2026",
+        link: "",
+        domain: "Cyber Security",
+        platform: "IBM",
+        image: "/certs/ibm-cybersec-training.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Enterprise Design Thinking Practitioner",
+        issuer: "IBM",
+        year: "2026",
+        link: "https://www.credly.com/badges/306a82b9-ea9e-4836-9c25-e086563929ff/public_url",
+        domain: "Design Thinking",
+        platform: "IBM",
+        image: "/certs/ibm-enterprise-design-thinking.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Garage Essentials",
+        issuer: "IBM",
+        year: "2026",
+        link: "https://www.credly.com/badges/daf75f51-c19f-4873-88bd-42e7529a1581/public_url",
+        domain: "Design Thinking",
+        platform: "IBM",
+        image: "/certs/ibm-garage-essentials.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Generative & Agentic AI Foundation",
+        issuer: "IBM",
+        year: "2026",
+        link: "https://www.credly.com/badges/6b4dc63a-443d-4986-ad98-d2336d0769b1/public_url",
+        domain: "Generative AI",
+        platform: "IBM",
+        image: "/certs/ibm-gen-ai-agentic-ai-foundation.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Intro to Agentic AI",
+        issuer: "IBM",
+        year: "2026",
+        link: "",
+        domain: "Agentic AI",
+        platform: "IBM",
+        image: "/certs/ibm-intro-to-agentic-ai.jpg",
+        score: ""
+    },
 ];
 
 export const LEADERSHIP = [

@@ -6,10 +6,9 @@ import { CERTIFICATIONS } from '@/lib/data';
 import { useState, useMemo, useEffect } from 'react';
 import Certifications from '@/components/Certifications';
 
-const PLATFORM_ORDER = ['Udemy', 'Coursera', 'NPTEL', 'Kaggle', 'Spoken Tutorial', 'NVIDIA', 'Others'];
-
 export default function CertificationsPage() {
     const [searchQuery, setSearchQuery] = useState('');
+    const [sortBy, setSortBy] = useState<'alphabetical' | 'chronological'>('alphabetical');
 
     const grouped = useMemo(() => {
         const q = searchQuery.toLowerCase().trim();
@@ -23,7 +22,12 @@ export default function CertificationsPage() {
         return map;
     }, [searchQuery]);
 
-    const platforms = PLATFORM_ORDER.filter(p => grouped[p]?.length);
+    const platforms = useMemo(() => {
+        const keys = Object.keys(grouped);
+        const others = keys.filter(k => k === 'Others');
+        const rest = keys.filter(k => k !== 'Others').sort((a, b) => a.localeCompare(b));
+        return [...rest, ...others];
+    }, [grouped]);
     const [selected, setSelected] = useState<string>(platforms[0] ?? '');
 
     // If selected platform disappears due to search, pick the first visible one
@@ -32,6 +36,23 @@ export default function CertificationsPage() {
             setSelected(platforms[0]);
         }
     }, [grouped, platforms, selected]);
+
+    const sortedItems = useMemo(() => {
+        const items = [...(grouped[selected] ?? [])];
+        if (sortBy === 'alphabetical') {
+            return items.sort((a, b) => a.title.localeCompare(b.title));
+        } else if (sortBy === 'chronological') {
+            return items.sort((a, b) => {
+                const yearA = parseInt(a.year) || 0;
+                const yearB = parseInt(b.year) || 0;
+                if (yearB !== yearA) {
+                    return yearB - yearA;
+                }
+                return a.title.localeCompare(b.title);
+            });
+        }
+        return items;
+    }, [grouped, selected, sortBy]);
 
     return (
         <main className="min-h-screen bg-[#121212] text-white pt-28 p-6 md:p-12 lg:p-24 overflow-x-hidden">
@@ -115,6 +136,51 @@ export default function CertificationsPage() {
                             })}
                         </div>
 
+                        {/* Sort selector and items count */}
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-4 border-b border-white/5">
+                            <div className="text-gray-400 text-sm font-medium">
+                                Showing <span className="text-white font-semibold">{sortedItems.length}</span> {sortedItems.length === 1 ? 'certification' : 'certifications'}
+                            </div>
+                            <div className="relative flex items-center gap-1 bg-white/5 p-1 rounded-xl border border-white/10">
+                                <button
+                                    onClick={() => setSortBy('alphabetical')}
+                                    className={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium transition-colors z-10 ${
+                                        sortBy === 'alphabetical' ? 'text-white' : 'text-gray-400 hover:text-white'
+                                    }`}
+                                >
+                                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                                    </svg>
+                                    Alphabetical
+                                    {sortBy === 'alphabetical' && (
+                                        <motion.div
+                                            layoutId="active-sort"
+                                            className="absolute inset-0 bg-blue-600 rounded-lg -z-10 shadow-lg shadow-blue-500/20"
+                                            transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                                        />
+                                    )}
+                                </button>
+                                <button
+                                    onClick={() => setSortBy('chronological')}
+                                    className={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium transition-colors z-10 ${
+                                        sortBy === 'chronological' ? 'text-white' : 'text-gray-400 hover:text-white'
+                                    }`}
+                                >
+                                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    Reverse Chronological
+                                    {sortBy === 'chronological' && (
+                                        <motion.div
+                                            layoutId="active-sort"
+                                            className="absolute inset-0 bg-blue-600 rounded-lg -z-10 shadow-lg shadow-blue-500/20"
+                                            transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                                        />
+                                    )}
+                                </button>
+                            </div>
+                        </div>
+
                         {/* Cert cards for selected platform */}
                         <AnimatePresence initial={false}>
                             <motion.div
@@ -124,7 +190,7 @@ export default function CertificationsPage() {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.15 }}
                             >
-                                <Certifications items={grouped[selected] ?? []} />
+                                <Certifications items={sortedItems} />
                             </motion.div>
                         </AnimatePresence>
                     </>
