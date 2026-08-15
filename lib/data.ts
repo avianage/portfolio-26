@@ -156,57 +156,6 @@ export const PROJECTS = [
             learnings: "Gained significant insight into Time Series Analysis and the trade-offs between model complexity and inference accuracy."
         }
     },
-    // {
-    //     id: "algo_visualizer",
-    //     title: "Sorting Visualizer",
-    //     year: "2023",
-    //     description: "Interactive web app visualizing classic sorting algorithms with adjustable speed and data size.",
-    //     tags: ["React", "Algorithms", "Education"],
-    //     challenge: "Visualizing asynchronous state updates during rapid array manipulations.",
-    //     featured: false,
-    //     github: "https://github.com/avianage/sorting-visualizer",
-    //     image: "/projects/sorting-visualizer.png",
-    //     details: {
-    //         overview: "A clean and intuitive tool to help students understand sorting algorithms like Merge Sort, Quick Sort, and Bubble Sort through animation.",
-    //         architecture: "React-based frontend using local component state to drive animations. CSS transitions handling smooth bar movements.",
-    //         keyDecisions: "Used generator functions to pause execution flow, allowing for step-by-step visualization without blocking the main thread.",
-    //         learnings: "Improved understanding of asynchronous JavaScript and React's rendering lifecycle when handling rapid state changes."
-    //     }
-    // },
-    // {
-    //     id: "task_cli",
-    //     title: "Rust Task CLI",
-    //     year: "2023",
-    //     description: "A lightning-fast command line todo list manager written in Rust.",
-    //     tags: ["Rust", "CLI", "Systems"],
-    //     challenge: "Managing file I/O safely and efficiently in a systems language.",
-    //     featured: false,
-    //     github: "https://github.com/avianage/rust-task-cli",
-    //     image: "/projects/task-cli.png",
-    //     details: {
-    //         overview: "A simple, no-nonsense CLI tool for managing daily tasks. Supports prioritization, due dates, and persistent local storage.",
-    //         architecture: "Pure Rust using Serde for JSON serialization/deserialization of the task list.",
-    //         keyDecisions: "Chose a flat JSON file for storage over SQLite for portability and simplicity of manual editing if needed.",
-    //         learnings: "First deep dive into Rust's ownership model and error handling patterns."
-    //     }
-    // },
-    {
-        id: "portfolio_v1",
-        title: "Legacy Portfolio",
-        year: "2022",
-        description: "First iteration of my personal portfolio built with HTML, SCSS and Vanilla JS.",
-        tags: ["HTML/CSS", "JavaScript", "Design"],
-        challenge: "Implementing responsive design without modern frameworks.",
-        featured: false,
-        github: "https://github.com/avianage/portfolio-website",
-        image: "/projects/portfolio-v1.png",
-        details: {
-            overview: "The humble beginnings of my web development journey. A static site showcasing early projects.",
-            architecture: "Static HTML/CSS served via GitHub Pages.",
-            keyDecisions: "Focused heavily on raw CSS flexbox and grid to build a solid foundation before moving to frameworks.",
-            learnings: "Solidified core web fundamentals, specifically the box model, semantic HTML, and DOM manipulation."
-        }
-    },
     {
         id: "sentiment-analysis",
         title: "Sentimental Analysis",
@@ -250,7 +199,8 @@ export const EXPERIENCE = [
         year: "May 2026 - Present",
         logo: "/logos/IBM.png",
         points: [
-            "Completing IBM's 7-week Cloud Full Stack Developer training track covering Core Java, Spring Boot, Microservices, Docker, Kubernetes, CI/CD with Jenkins, Angular, React, Node.js, MongoDB, and SQL, applied across hands-on project builds."
+            "Completed IBM's 7-week Cloud Full Stack Developer training track covering Core Java, Spring Boot, Microservices, Docker, Kubernetes, CI/CD with Jenkins, Angular, React, Node.js, MongoDB, and SQL, applied across hands-on project builds.",
+            "Currently working on BFSI-domain systems"
         ]
     },
     {
@@ -498,6 +448,16 @@ export const CERTIFICATIONS = [
         image: "/certs/ibm-intro-to-agentic-ai.jpg",
         score: ""
     },
+    {
+        title: "Claude Partner Badge - Claude Code",
+        issuer: "Anthropic",
+        year: "2026",
+        link: "https://www.credly.com/badges/3566fde6-99a4-4718-94f2-23fa8f28f284/public_url",
+        domain: "Agentic AI",
+        platform: "Anthropic",
+        image: "/certs/anthropic-claude-partner-badge-claude-code.png",
+        score: ""
+    }
 ];
 
 export const LEADERSHIP = [
