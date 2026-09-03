@@ -7,8 +7,46 @@ interface CertItem {
     link: string;
     domain: string;
     platform?: string;
+    category?: string;
     image?: string;
     score?: string;
+    month?: string;
+    expiryMonth?: string;
+    expiryYear?: string;
+}
+
+const MONTH_NAMES = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+// Maps "May" / "sep" / "09" / "9" to a 0-based month index; null if unrecognized.
+function parseMonth(m?: string): number | null {
+    if (!m) return null;
+    const s = m.trim().toLowerCase();
+    if (!s) return null;
+    const num = Number(s);
+    if (Number.isInteger(num) && num >= 1 && num <= 12) return num - 1;
+    const idx = MONTH_NAMES.findIndex(name => name.toLowerCase().startsWith(s));
+    return idx === -1 ? null : idx;
+}
+
+function formatMonthYear(month: string | undefined, year: string): string {
+    const idx = parseMonth(month);
+    return idx === null ? year : `${MONTH_NAMES[idx]} ${year}`;
+}
+
+function expiryStatus(expiryMonth?: string, expiryYear?: string): { label: string; expired: boolean } | null {
+    if (!expiryYear) return null;
+    const y = parseInt(expiryYear, 10);
+    if (!Number.isFinite(y)) return null;
+    const monthIdx = parseMonth(expiryMonth);
+    // No month => treat expiry as end of that year.
+    const cutoff = new Date(y, (monthIdx ?? 11) + 1, 1);
+    return {
+        label: `Expires ${formatMonthYear(expiryMonth, expiryYear)}`,
+        expired: new Date() >= cutoff,
+    };
 }
 
 export default function Certifications({ items }: { items: CertItem[] }) {
@@ -39,6 +77,11 @@ export default function Certifications({ items }: { items: CertItem[] }) {
                             <div className="absolute top-3 left-3 px-2 py-1 text-[10px] uppercase font-bold tracking-tight bg-blue-600/80 text-white rounded">
                                 {cert.domain}
                             </div>
+                            {cert.platform && (
+                                <div className="absolute top-3 right-3 px-2 py-1 text-[10px] uppercase font-bold tracking-tight bg-black/60 text-white/90 rounded backdrop-blur-sm">
+                                    {cert.platform}
+                                </div>
+                            )}
                         </div>
 
                         <div>
@@ -49,7 +92,20 @@ export default function Certifications({ items }: { items: CertItem[] }) {
                         </div>
 
                         <div className="flex justify-between items-center mt-auto pt-4 border-t border-white/5">
-                            <span className="text-xs font-mono text-zinc-500">{cert.year}</span>
+                            <div className="flex items-center gap-2 flex-wrap">
+                                <span className="text-xs font-mono text-zinc-500">{formatMonthYear(cert.month, cert.year)}</span>
+                                {(() => {
+                                    const expiry = expiryStatus(cert.expiryMonth, cert.expiryYear);
+                                    if (!expiry) return null;
+                                    return expiry.expired ? (
+                                        <span className="text-xs font-semibold text-red-400/80 bg-red-400/10 px-2 py-0.5 rounded">
+                                            Expired
+                                        </span>
+                                    ) : (
+                                        <span className="text-xs font-mono text-zinc-500">· {expiry.label}</span>
+                                    );
+                                })()}
+                            </div>
                             {cert.score && (
                                 <span className="text-xs font-semibold text-green-400/80 bg-green-400/10 px-2 py-0.5 rounded">
                                     Score: {cert.score}

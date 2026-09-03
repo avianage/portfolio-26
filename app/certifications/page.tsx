@@ -6,21 +6,34 @@ import { CERTIFICATIONS } from '@/lib/data';
 import { useState, useMemo, useEffect } from 'react';
 import Certifications from '@/components/Certifications';
 
+const ALL_CATEGORIES = ['Technical', 'Domain'] as const;
+type Category = typeof ALL_CATEGORIES[number];
+const certCategory = (cert: { category?: string }): Category =>
+    cert.category === 'Domain' ? 'Domain' : 'Technical';
+
 export default function CertificationsPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState<'alphabetical' | 'chronological'>('alphabetical');
+
+    const categories = useMemo(
+        () => ALL_CATEGORIES.filter(c => CERTIFICATIONS.some(cert => certCategory(cert) === c)),
+        []
+    );
+    const [category, setCategory] = useState<Category>(categories[0] ?? 'Technical');
 
     const grouped = useMemo(() => {
         const q = searchQuery.toLowerCase().trim();
         const map: Record<string, typeof CERTIFICATIONS> = {};
         for (const cert of CERTIFICATIONS) {
-            const p = cert.platform ?? 'Others';
+            if (certCategory(cert) !== category) continue;
+            // Technical certs partition by platform; domain certs partition by domain (Banking, Insurance, ...).
+            const p = (category === 'Domain' ? cert.domain : cert.platform) || 'Others';
             if (q && !cert.title.toLowerCase().includes(q) && !cert.issuer.toLowerCase().includes(q)) continue;
             if (!map[p]) map[p] = [];
             map[p].push(cert);
         }
         return map;
-    }, [searchQuery]);
+    }, [searchQuery, category]);
 
     const platforms = useMemo(() => {
         const keys = Object.keys(grouped);
@@ -96,6 +109,30 @@ export default function CertificationsPage() {
                         </button>
                     )}
                 </div>
+
+                {/* Category tabs: Technical vs Domain */}
+                {categories.length > 1 && (
+                    <div className="relative flex items-center gap-1 bg-white/5 p-1 rounded-xl border border-white/10 w-fit mb-8">
+                        {categories.map(cat => (
+                            <button
+                                key={cat}
+                                onClick={() => setCategory(cat)}
+                                className={`relative px-5 py-2 rounded-lg text-xs font-semibold transition-colors z-10 ${
+                                    category === cat ? 'text-white' : 'text-gray-400 hover:text-white'
+                                }`}
+                            >
+                                {cat}
+                                {category === cat && (
+                                    <motion.div
+                                        layoutId="active-category"
+                                        className="absolute inset-0 bg-blue-600 rounded-lg -z-10 shadow-lg shadow-blue-500/20"
+                                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                                    />
+                                )}
+                            </button>
+                        ))}
+                    </div>
+                )}
 
                 {platforms.length === 0 ? (
                     <div className="py-24 text-center">

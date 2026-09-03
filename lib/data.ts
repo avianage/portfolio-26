@@ -266,196 +266,442 @@ export const EDUCATION = [
 ];
 
 export const CERTIFICATIONS = [
+
+    // --- Technical Certifications ---
+
+    // Anthropic
     {
-        title: "Git Training",
-        issuer: "Spoken Tutorial, IIT Bombay",
-        year: "2024",
-        link: "#",
-        domain: "Tools",
-        platform: "Spoken Tutorial",
-        image: "/certs/git-iitb.png",
-        score: "73.33%"
+        title: "Claude Partner Badge - Claude Code",
+        issuer: "Anthropic",
+        year: "2026",
+        month: "August",
+        expiryMonth: "February",
+        expiryYear: "2027",
+        link: "https://www.credly.com/badges/3566fde6-99a4-4718-94f2-23fa8f28f284/public_url",
+        domain: "Agentic AI",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-claude-partner-badge-claude-code.png",
+        score: ""
     },
     {
-        title: "Introduction to Machine Learning",
-        issuer: "NPTEL Online Certification",
-        year: "2024",
-        link: "#",
+        title: "Claude Code 101",
+        issuer: "Anthropic",
+        year: "2026",
+        month: "",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://verify.skilljar.com/c/4m6mwoiwdcq6",
+        domain: "Claude Code",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-claude-code-101.jpg",
+        score: ""
+    },
+    {
+        title: "Claude Code in Action",
+        issuer: "Anthropic",
+        year: "2026",
+        month: "",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://verify.skilljar.com/c/4bmudqedt46n",
+        domain: "Claude Code",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-claude-code-in-action.jpg",
+        score: ""
+    },
+
+    // Coursera
+    {
+        title: "Intro to Artificial Intelligence",
+        issuer: "IBM via Coursera",
+        year: "2023",
+        month: "October",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://coursera.org/share/36c15ecc77fc7de2d33de5b75d193951",
         domain: "AI/ML",
-        platform: "NPTEL",
-        image: "/certs/nptel-introML.png",
-        score: "76%"
+        platform: "Coursera",
+        category: "Technical",
+        image: "/certs/tech/coursera/coursera-ibm-ai.png"
+    },
+
+    // IBM Learning
+    {
+        title: "IBM - Core Training 2026",
+        issuer: "IBM",
+        year: "2026",
+        month: "June",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Fundamentals",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-core-training.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Role Based Cyber Security Training",
+        issuer: "IBM Learning",
+        year: "2026",
+        month: "June",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Cyber Security",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-cybersec-training.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Enterprise Design Thinking Practitioner",
+        issuer: "IBM Learning",
+        year: "2026",
+        month: "June",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.credly.com/badges/306a82b9-ea9e-4836-9c25-e086563929ff/public_url",
+        domain: "Design Thinking",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-enterprise-design-thinking.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Garage Essentials",
+        issuer: "IBM Learning",
+        year: "2026",
+        month: "June",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.credly.com/badges/daf75f51-c19f-4873-88bd-42e7529a1581/public_url",
+        domain: "Design Thinking",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-garage-essentials.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Generative & Agentic AI Foundation",
+        issuer: "IBM Learning",
+        year: "2026",
+        month: "June",
+        expiryMonth: "June",
+        expiryYear: "2027",
+        link: "https://www.credly.com/badges/6b4dc63a-443d-4986-ad98-d2336d0769b1/public_url",
+        domain: "Generative AI",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-gen-ai-agentic-ai-foundation.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Intro to Agentic AI",
+        issuer: "IBM Learning",
+        year: "2026",
+        month: "June",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Agentic AI",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-intro-to-agentic-ai.jpg",
+        score: ""
+    },
+
+    // Kaggle
+    {
+        title: "Intro to Programming",
+        issuer: "Kaggle",
+        year: "2023",
+        month: "August",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.kaggle.com/learn/certification/avianage/intro-to-programming",
+        domain: "Fundamentals",
+        platform: "Kaggle",
+        category: "Technical",
+        image: "/certs/tech/kaggle/kaggle-intro-prog.png"
+    },
+    {
+        title: "Python Programming",
+        issuer: "Kaggle",
+        year: "2023",
+        month: "March",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.kaggle.com/learn/certification/avianage/python",
+        domain: "Fundamentals",
+        platform: "Kaggle",
+        category: "Technical",
+        image: "/certs/tech/kaggle/kaggle-python.png"
     },
     {
         title: "Intro to AI Ethics",
         issuer: "Kaggle",
         year: "2023",
+        month: "December",
+        expiryMonth: "",
+        expiryYear: "",
         link: "https://www.kaggle.com/learn/certification/avianage/intro-to-ai-ethics",
         domain: "AI/ML",
         platform: "Kaggle",
-        image: "/certs/intro_ai.png"
+        category: "Technical",
+        image: "/certs/tech/kaggle/kaggle-intro-ai-ethics.png"
     },
     {
         title: "Intro to Machine Learning",
         issuer: "Kaggle",
         year: "2023",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
         link: "https://www.kaggle.com/learn/certification/avianage/intro-to-machine-learning",
         domain: "AI/ML",
         platform: "Kaggle",
-        image: "/certs/intro_ml.png"
+        category: "Technical",
+        image: "/certs/tech/kaggle/kaggle-intro-ml.png"
     },
+
+    // NPTEL
     {
-        title: "Intro to Artificial Intelligence",
-        issuer: "IBM via Coursera",
+        title: "Introduction to Machine Learning",
+        issuer: "NPTEL Online Certification",
         year: "2024",
-        link: "https://coursera.org/share/36c15ecc77fc7de2d33de5b75d193951",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
         domain: "AI/ML",
-        platform: "Coursera",
-        image: "/certs/coursera-ibm-ai.png"
+        platform: "NPTEL",
+        category: "Technical",
+        image: "/certs/tech/nptel/nptel-intro-ml.png",
+        score: "76%"
+    },
+
+    // NVIDIA
+    {
+        title: "Fundamentals of Deep Learning",
+        issuer: "NVIDIA Deep Learning Institute",
+        year: "2022",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "DL",
+        platform: "NVIDIA",
+        category: "Technical",
+        image: "/certs/tech/nvidia/nvidia-fdl.jpg"
+    },
+
+    // OpenAI
+    {
+        title: "OpenAI Foundational Knowledge",
+        issuer: "OpenAI",
+        year: "2026",
+        month: "August",
+        expiryMonth: "August",
+        expiryYear: "2027",
+        link: "",
+        domain: "AI",
+        platform: "OpenAI",
+        category: "Technical",
+        image: "/certs/tech/openai/openai-foundational-knowledge.jpg",
+        score: ""
     },
     {
-        title: "Intro to Programming",
-        issuer: "Kaggle",
-        year: "2023",
-        link: "https://www.kaggle.com/learn/certification/avianage/intro-to-programming",
-        domain: "Fundamentals",
-        platform: "Kaggle",
-        image: "/certs/intro_prog.png"
+        title: "API Deployment Practitioner",
+        issuer: "OpenAI",
+        year: "2026",
+        month: "September",
+        expiryMonth: "September",
+        expiryYear: "2027",
+        link: "",
+        domain: "AI",
+        platform: "OpenAI",
+        category: "Technical",
+        image: "/certs/tech/openai/openai-api-deployment-practitioner.jpg",
+        score: ""
+    },
+    {
+        title: "Codex Deployment Practitioner",
+        issuer: "OpenAI",
+        year: "2026",
+        month: "September",
+        expiryMonth: "September",
+        expiryYear: "2027",
+        link: "",
+        domain: "AI",
+        platform: "OpenAI",
+        category: "Technical",
+        image: "/certs/tech/openai/openai-codex-deployment.jpg",
+        score: ""
+    },
+    {
+        title: "OpenAI Consultative Solutions Practitioner",
+        issuer: "OpenAI",
+        year: "2026",
+        month: "September",
+        expiryMonth: "September",
+        expiryYear: "2027",
+        link: "",
+        domain: "AI",
+        platform: "OpenAI",
+        category: "Technical",
+        image: "/certs/tech/openai/openai-consultative-solutions-practitioner.jpg",
+        score: ""
+    },
+    {
+        title: "OpenAI Cyber Deployment Practitioner",
+        issuer: "OpenAI",
+        year: "2026",
+        month: "September",
+        expiryMonth: "September",
+        expiryYear: "2027",
+        link: "",
+        domain: "AI",
+        platform: "OpenAI",
+        category: "Technical",
+        image: "/certs/tech/openai/openai-cyber-deployment.jpg",
+        score: ""
+    },
+    {
+        title: "OpenAI Technical Practitioner",
+        issuer: "OpenAI",
+        year: "2026",
+        month: "August",
+        expiryMonth: "August",
+        expiryYear: "2027",
+        link: "",
+        domain: "AI",
+        platform: "OpenAI",
+        category: "Technical",
+        image: "/certs/tech/openai/openai-technical-practitioner.jpg",
+        score: ""
+    },
+
+    // Spoken Tutorial, IIT Bombay
+    {
+        title: "Git Training",
+        issuer: "Spoken Tutorial, IIT Bombay",
+        year: "2024",
+        month: "October",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Tools",
+        platform: "Spoken Tutorial",
+        category: "Technical",
+        image: "/certs/tech/spoken-tutorial/st-git-iitb.png",
+        score: "73.33%"
+    },
+    {
+        title: "GIMP Training",
+        issuer: "Spoken Tutorial, IIT Bombay",
+        year: "2022",
+        month: "June",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Tools",
+        platform: "Spoken Tutorial",
+        category: "Technical",
+        image: "/certs/tech/spoken-tutorial/st-gimp-iitb.jpg"
     },
     {
         title: "Linux Training",
         issuer: "Spoken Tutorial, IIT Bombay",
         year: "2025",
+        month: "April",
+        expiryMonth: "",
+        expiryYear: "",
         link: "#",
         domain: "Fundamentals",
         platform: "Spoken Tutorial",
-        image: "/certs/linux-iitb.png",
+        category: "Technical",
+        image: "/certs/tech/spoken-tutorial/st-linux-iitb.png",
         score: "76.67%"
     },
     {
-        title: "Python",
-        issuer: "Kaggle",
-        year: "2023",
-        link: "https://www.kaggle.com/learn/certification/avianage/python",
-        domain: "Fundamentals",
-        platform: "Kaggle",
-        image: "/certs/python.png"
-    },
-    {
-        title: "Cyber Security and Ethical Hacking",
-        issuer: "Institute for Design of Electrical Measuring Instruments",
-        year: "2021",
-        link: "#",
-        domain: "Cyber Security",
-        platform: "Others",
-        image: "/certs/cs-eh.jpg"
-    },
-    {
-        title: "Fundamentals of Deep Learning",
-        issuer: "NVIDIA Deep Learning Institute",
-        year: "2022",
-        link: "#",
-        domain: "DL",
-        platform: "NVIDIA",
-        image: "/certs/fdl.jpg"
-    },
-    {
-        title: "GIMP Training",
+        title: "LaTeX Training",
         issuer: "Spoken Tutorial",
-        year: "2022",
+        year: "2023",
+        month: "November",
+        expiryMonth: "",
+        expiryYear: "",
         link: "#",
         domain: "Tools",
         platform: "Spoken Tutorial",
-        image: "/certs/gimp-iitb.jpg"
-    },
-    {
-        title: "LATEX Training",
-        issuer: "Spoken Tutorial",
-        year: "2023",
-        link: "#",
-        domain: "Tools",
-        platform: "Spoken Tutorial",
-        image: "/certs/latex-iitb.jpg",
+        category: "Technical",
+        image: "/certs/tech/spoken-tutorial/st-latex-iitb.jpg",
         score: "73.33%"
     },
+
+    // Udemy
     {
         title: "Business Etiquette - The Polished Professinal",
         issuer: "Udemy",
         year: "2026",
+        month: "June",
+        expiryMonth: "",
+        expiryYear: "",
         link: "https://www.udemy.com/certificate/UC-9fcacc1e-564c-474d-bb21-0877a83074d2/",
         domain: "Soft Skills",
         platform: "Udemy",
-        image: "/certs/udemy-business-etiquette.jpg",
+        category: "Technical",
+        image: "/certs/tech/udemy/udemy-business-etiquette.jpg",
         score: ""
     },
     {
-        title: "IBM - Core Training 2026",
-        issuer: "IBM",
+        title: "Playwright JS/TS Automation Testing from Scratch & Framework",
+        issuer: "Udemy",
         year: "2026",
-        link: "",
-        domain: "Fundamentals",
-        platform: "IBM",
-        image: "/certs/ibm-core-training.jpg",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.udemy.com/certificate/UC-ec08490a-a4a6-49ed-a038-69255556a99e/",
+        domain: "Automation Testing",
+        platform: "Udemy",
+        category: "Technical",
+        image: "/certs/tech/udemy/udemy-playwright-automation-testing.jpg",
         score: ""
     },
+
+    // Others
     {
-        title: "IBM - Role Based Cyber Security Training",
-        issuer: "IBM",
-        year: "2026",
-        link: "",
+        title: "Cyber Security and Ethical Hacking",
+        issuer: "Institute for Design of Electrical Measuring Instruments",
+        year: "2021",
+        month: "August",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
         domain: "Cyber Security",
-        platform: "IBM",
-        image: "/certs/ibm-cybersec-training.jpg",
-        score: ""
+        platform: "Others",
+        category: "Technical",
+        image: "/certs/tech/others/cs-eh.jpg"
     },
+
+    // --- Domain / industry certifications ---
+
+    // Insurance Industry
     {
-        title: "IBM - Enterprise Design Thinking Practitioner",
-        issuer: "IBM",
+        title: "Insurance Industry Fundamentals from Primerli",
+        issuer: "Primerli",
         year: "2026",
-        link: "https://www.credly.com/badges/306a82b9-ea9e-4836-9c25-e086563929ff/public_url",
-        domain: "Design Thinking",
-        platform: "IBM",
-        image: "/certs/ibm-enterprise-design-thinking.jpg",
-        score: ""
-    },
-    {
-        title: "IBM - Garage Essentials",
-        issuer: "IBM",
-        year: "2026",
-        link: "https://www.credly.com/badges/daf75f51-c19f-4873-88bd-42e7529a1581/public_url",
-        domain: "Design Thinking",
-        platform: "IBM",
-        image: "/certs/ibm-garage-essentials.jpg",
-        score: ""
-    },
-    {
-        title: "IBM - Generative & Agentic AI Foundation",
-        issuer: "IBM",
-        year: "2026",
-        link: "https://www.credly.com/badges/6b4dc63a-443d-4986-ad98-d2336d0769b1/public_url",
-        domain: "Generative AI",
-        platform: "IBM",
-        image: "/certs/ibm-gen-ai-agentic-ai-foundation.jpg",
-        score: ""
-    },
-    {
-        title: "IBM - Intro to Agentic AI",
-        issuer: "IBM",
-        year: "2026",
-        link: "",
-        domain: "Agentic AI",
-        platform: "IBM",
-        image: "/certs/ibm-intro-to-agentic-ai.jpg",
-        score: ""
-    },
-    {
-        title: "Claude Partner Badge - Claude Code",
-        issuer: "Anthropic",
-        year: "2026",
-        link: "https://www.credly.com/badges/3566fde6-99a4-4718-94f2-23fa8f28f284/public_url",
-        domain: "Agentic AI",
-        platform: "Anthropic",
-        image: "/certs/anthropic-claude-partner-badge-claude-code.png",
+        month: "August",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Insurance",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/insurance/primerli-insurance-industry-fundamentals.jpg",
         score: ""
     }
 ];
