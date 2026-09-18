@@ -340,6 +340,76 @@ export const CERTIFICATIONS = [
         image: "/certs/tech/anthropic/anthropic-claude-code-in-action.jpg",
         score: ""
     },
+    {
+        title: "AI Fluency: Framework & Foundations",
+        issuer: "Anthropic",
+        year: "",
+        month: "",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "AI Fluency",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-ai-fluency-framework-foundations.jpg",
+        score: ""
+    },
+    {
+        title: "AI Fluency: AI Capabilities & Limitations",
+        issuer: "Anthropic",
+        year: "",
+        month: "",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "AI Fluency",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-ai-capabilities-limitations.jpg",
+        score: ""
+    },
+    {
+        title: "Claude with the Anthropic API",
+        issuer: "Anthropic",
+        year: "",
+        month: "",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Claude API",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-claude-with-anthropic-api.jpg",
+        score: ""
+    },
+    {
+        title: "Model Context Protocol: Advanced Topics",
+        issuer: "Anthropic",
+        year: "",
+        month: "",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "MCP",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-mcp-advanced-topics.jpg",
+        score: ""
+    },
+    {
+        title: "Claude Certified Developer - Foundations",
+        issuer: "Anthropic",
+        year: "2026",
+        month: "September",
+        expiryMonth: "September",
+        expiryYear: "2027",
+        link: "https://www.credly.com/badges/0b6551f2-c192-4bf4-be46-83539b1f2d28",
+        domain: "Claude Development",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-claude-certified-developer-foundations.jpg",
+        score: ""
+    },
 
     // Coursera
     {
@@ -357,11 +427,119 @@ export const CERTIFICATIONS = [
     },
 
     // Google Cloud
-
     {
+        title: "Accelerate Development with Antigravity",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Generative AI",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-accelerate-development-antigravity.jpg",
+        score: ""
+    },
+    {
+        title: "Add Agents to Gemini Enterprise",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Artificial Intelligence",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-add-agents-gemini-enterprise.jpg",
+        score: ""
+    },
+    {
+        title: "Certified Partner Specialist Gemini Enterprise Agent Development",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "March",
+        expiryYear: "2027",
+        link: "",
+        domain: "Gemini Enterprise Agent Development",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-partner-specialist-gemini-enterprise-agent-development.jpg",
+        score: ""
+    },
+    {
+        title: "Certified Partner Specialist Gemini Enterprise Deployment",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "March",
+        expiryYear: "2027",
+        link: "",
+        domain: "Gemini Enterprise Deployment",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-partner-specialist-gemini-enterprise-deployment.jpg",
+        score: ""
+    },
+    {
+        title: "Deploy an Agent with Agent Development Kit (ADK)",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Artificial Intelligence",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-deploy-agent-adk.jpg",
+        score: ""
+    },
+    {
+        title: "Deploy Gemini Enterprise with Workspace Data Sources and Model Armor",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Productivity and Collaboration",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-deploy-gemini-enterprise-workspace-model-armor.jpg",
+        score: ""
+    },
+    {
+        title: "Evaluate and Improve Agent Development Kit Agents",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Generative AI",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-evaluate-improve-adk-agents.jpg",
+        score: ""
+    },
+    {
+        title: "Govern Agent Access with Gemini Enterprise Agent Platform",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Generative AI",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-govern-agent-access-gemini-enterprise.jpg",
+        score: ""
+    },
 
-    }
-    ,
     // IBM Learning
     {
         title: "IBM - Core Training 2026",
@@ -445,6 +623,20 @@ export const CERTIFICATIONS = [
         platform: "IBM",
         category: "Technical",
         image: "/certs/tech/ibm/ibm-intro-to-agentic-ai.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - DevSecOps Explorer: Security & Automation for DevOps",
+        issuer: "IBM",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.credly.com/go/FBLwaAdF",
+        domain: "DevSecOps",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-devsecops-explorer.jpg",
         score: ""
     },
 
@@ -808,20 +1000,6 @@ export const CERTIFICATIONS = [
         platform: "IBM Learning",
         category: "Domain",
         image: "/certs/domain/banking/primerli-banking-payments-industry-fundamentals.jpg",
-        score: ""
-    },
-    {
-        title: "Banking Industry Financial Insight",
-        issuer: "IBM",
-        year: "2026",
-        month: "September",
-        expiryMonth: "",
-        expiryYear: "",
-        link: "#",
-        domain: "Banking",
-        platform: "IBM Learning",
-        category: "Domain",
-        image: "/certs/domain/banking/ibm-banking-industry-financial-insight.jpg",
         score: ""
     },
     {
