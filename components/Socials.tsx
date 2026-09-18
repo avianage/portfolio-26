@@ -2,6 +2,7 @@
 
 import { SOCIALS } from '@/lib/data';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 // Simple Icons icons would be ideal here basically, but using SVG paths for portability
 const Icons = {
@@ -85,13 +86,19 @@ const Icons = {
 export default function Socials({
     className = "",
     itemClassName = "",
-    featuredOnly = false
+    featuredOnly = false,
+    ids
 }: {
     className?: string,
     itemClassName?: string,
-    featuredOnly?: boolean
+    featuredOnly?: boolean,
+    ids?: string[]
 }) {
-    const links = featuredOnly ? SOCIALS.filter(s => s.featured) : SOCIALS;
+    const links = ids
+        ? SOCIALS.filter(s => ids.includes(s.id))
+        : featuredOnly
+            ? SOCIALS.filter(s => s.featured)
+            : SOCIALS;
 
     const defaultItemClass = "bg-white/10 border border-white/20 text-gray-300 hover:text-white hover:bg-white/20 hover:border-white/40";
 
@@ -108,7 +115,17 @@ export default function Socials({
                     className={`p-3 rounded-full transition-colors backdrop-blur-md shadow-lg ${itemClassName || defaultItemClass}`}
                     aria-label={link.name}
                 >
-                    {Icons[link.id as keyof typeof Icons] || Icons.default}
+                    {'logo' in link && link.logo ? (
+                        <Image
+                            src={link.logo}
+                            alt={`${link.name} logo`}
+                            width={20}
+                            height={20}
+                            className="w-5 h-5 object-contain"
+                        />
+                    ) : (
+                        Icons[link.id as keyof typeof Icons] || Icons.default
+                    )}
                 </motion.a>
             ))}
         </div>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { CERTIFICATIONS } from '@/lib/data';
 import { useState, useMemo, useEffect } from 'react';
 import Certifications from '@/components/Certifications';
+import Socials from '@/components/Socials';
 
 const ALL_CATEGORIES = ['Technical', 'Domain'] as const;
 type Category = typeof ALL_CATEGORIES[number];
@@ -84,6 +85,10 @@ export default function CertificationsPage() {
                     <p className="text-gray-400 max-w-xl text-lg">
                         Verified credentials reflecting my continuous growth in advanced engineering domains.
                     </p>
+                    <div className="mt-6">
+                        <p className="text-sm text-gray-500 mb-3">Verify my credentials</p>
+                        <Socials ids={["kaggle", "credly", "google-skills", "anthropic-academy"]} />
+                    </div>
                 </div>
 
                 {/* Search */}

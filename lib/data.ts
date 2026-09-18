@@ -84,6 +84,34 @@ export const SOCIALS = [
         name: "Instagram",
         url: "https://instagram.com/aakashxjoshi",
         featured: false
+    },
+    {
+        id: "kaggle",
+        name: "Kaggle",
+        url: "https://www.kaggle.com/<username>",
+        featured: true,
+        logo: "/logos/kaggle.png"
+    },
+    {
+        id: "credly",
+        name: "Credly",
+        url: "https://www.credly.com/users/<username>",
+        featured: true,
+        logo: "/logos/credly.png"
+    },
+    {
+        id: "google-skills",
+        name: "Google Cloud Skills Boost",
+        url: "https://www.cloudskillsboost.google/public_profiles/<id>",
+        featured: false,
+        logo: "/logos/google-cloud-skills-boost.png"
+    },
+    {
+        id: "anthropic-academy",
+        name: "Anthropic Academy",
+        url: "https://www.anthropic.com/learn/profile/<id>",
+        featured: false,
+        logo: "/logos/anthropic.png"
     }
 ];
 
@@ -328,6 +356,12 @@ export const CERTIFICATIONS = [
         image: "/certs/tech/coursera/coursera-ibm-ai.png"
     },
 
+    // Google Cloud
+
+    {
+
+    }
+    ,
     // IBM Learning
     {
         title: "IBM - Core Training 2026",
@@ -703,7 +737,136 @@ export const CERTIFICATIONS = [
         category: "Domain",
         image: "/certs/domain/insurance/primerli-insurance-industry-fundamentals.jpg",
         score: ""
-    }
+    },
+    {
+        title: "Insurance Industry Trends from Primerli",
+        issuer: "Primerli",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Insurance",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/insurance/primerli-insurance-industry-trends.jpg",
+        score: ""
+    },
+    {
+        title: "Insurance Industry Financial Insight - Property & Casualty Insurance",
+        issuer: "Primerli",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Insurance",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/insurance/primerli-insurance-industry-financial-insight-p&c.jpg",
+        score: ""
+    },
+    {
+        title: "Insurance Industry Jumpstart",
+        issuer: "IBM",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Insurance",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/insurance/ibm-insurance-industry-jumpstart.jpg",
+        score: ""
+    },
+
+    // Banking Industry
+    {
+        title: "Banking Retail Industry Fundamentals from Primerli",
+        issuer: "Primerli",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Banking",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/banking/primerli-banking-retail-industry-fundamentals.jpg",
+        score: ""
+    },
+    {
+        title: "Banking Payments Industry Fundamentals from Primerli",
+        issuer: "Primerli",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Banking",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/banking/primerli-banking-payments-industry-fundamentals.jpg",
+        score: ""
+    },
+    {
+        title: "Banking Industry Financial Insight",
+        issuer: "IBM",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Banking",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/banking/ibm-banking-industry-financial-insight.jpg",
+        score: ""
+    },
+    {
+        title: "Banking Corporate Banking Industry Fundamentals from Primerli",
+        issuer: "Primerli",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Banking",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/banking/primerli-banking-corporate-banking-industry-fundamentals.jpg",
+        score: ""
+    },
+    {
+        title: "Banking Industry Financial Insight",
+        issuer: "IBM",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Banking",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/banking/ibm-banking-industry-financial-insight.jpg",
+        score: ""
+    },
+    {
+        title: "Banking Industry Jumpstart Badge",
+        issuer: "IBM",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "#",
+        domain: "Banking",
+        platform: "IBM Learning",
+        category: "Domain",
+        image: "/certs/domain/banking/ibm-banking-industry-jumpstart.jpg",
+        score: ""
+    },
+
 ];
 
 export const LEADERSHIP = [
