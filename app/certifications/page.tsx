@@ -87,7 +87,7 @@ export default function CertificationsPage() {
                     </p>
                     <div className="mt-6">
                         <p className="text-sm text-gray-500 mb-3">Verify my credentials</p>
-                        <Socials ids={["kaggle", "credly"]} />
+                        <Socials ids={["kaggle", "credly", "databricks"]} />
                     </div>
                 </div>
 

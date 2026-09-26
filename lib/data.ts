@@ -9,7 +9,7 @@ export const SKILLS = [
 
 export const PROFILE = {
     name: "Aakash Joshi",
-    role: "Python Developer | AI Engineering | Building Scalable Systems",
+    role: "Software Engineer | Backend & Cloud Infrastructure",
     resume: "/resume",
     resumeLink: "/resume/resume.jpg?v=3"
 };
@@ -38,19 +38,19 @@ export const ABOUT = {
 
 export const FOCUS_AREAS = [
     {
-        title: "AI",
-        description: "Integrating intelligence into applications.",
-        color: "text-purple-300"
-    },
-    {
-        title: "DevOps",
-        description: "Streamlining delivery and operations.",
+        title: "Backend",
+        description: "APIs and data models for multi-tenant SaaS, built with Node.js, Spring Boot and PostgreSQL.",
         color: "text-blue-300"
     },
     {
         title: "Infrastructure",
-        description: "Scalable, resilient foundation engineering.",
+        description: "A self-hosted Proxmox homelab running my projects on Docker, with Tailscale networking.",
         color: "text-cyan-300"
+    },
+    {
+        title: "Applied AI",
+        description: "Forecasting models in production settings, and moving toward model serving and RAG pipelines.",
+        color: "text-purple-300"
     }
 ];
 
@@ -77,7 +77,7 @@ export const SOCIALS = [
         id: "leetcode",
         name: "LeetCode",
         url: "https://leetcode.com/avianage",
-        featured: true
+        featured: false
     },
     {
         id: "instagram",
@@ -89,15 +89,22 @@ export const SOCIALS = [
         id: "kaggle",
         name: "Kaggle",
         url: "https://www.kaggle.com/avianage",
-        featured: true,
+        featured: false,
         logo: "/logos/certs-orgs/kaggle.png"
     },
     {
         id: "credly",
         name: "Credly",
         url: "https://www.credly.com/users/aakash-joshi.de1c40dd/badges/credly",
-        featured: true,
+        featured: false,
         logo: "/logos/certs-orgs/credly.png"
+    },
+    {
+        id: "databricks",
+        name: "Databricks",
+        url: "https://credentials.databricks.com/profile/avianage/wallet",
+        featured: false,
+        logo: "/logos/certs-orgs/databricks.png"
     }
 ];
 
@@ -208,7 +215,7 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
     {
-        role: "Associate Systems Engineer",
+        role: "Application Developer",
         company: "IBM India",
         year: "May 2026 - Present",
         logo: "/logos/companies/IBM.png",
@@ -223,9 +230,9 @@ export const EXPERIENCE = [
         year: "March 2026 - May 2026",
         logo: "/logos/companies/averlon.png",
         points: [
-            "Building a multi-tenant SaaS Billing Management System from scratch using Node.js, Express, React (Vite), and PostgreSQL.",
+            "Built a multi-tenant SaaS Billing Management System from scratch using Node.js, Express, React (Vite), and PostgreSQL.",
             "Designed normalized relational schema supporting tenant isolation, subscription plans, and invoice lifecycle management.",
-            "Developed RESTful APIs for billing operations including plan management, usage tracking, and payment workflows."
+            "Developed 12+ RESTful APIs for billing operations including plan management, usage tracking, and payment workflows."
         ]
     },
     {
@@ -408,6 +415,20 @@ export const CERTIFICATIONS = [
         platform: "Anthropic",
         category: "Technical",
         image: "/certs/tech/anthropic/anthropic-claude-certified-developer-foundations.jpg",
+        score: "955/1000"
+    },
+    {
+        title: "Claude 101",
+        issuer: "Anthropic",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Claude Basics",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-claude-101.jpg",
         score: ""
     },
 
@@ -537,6 +558,36 @@ export const CERTIFICATIONS = [
         platform: "Google Cloud",
         category: "Technical",
         image: "/certs/tech/google-cloud/google-cloud-govern-agent-access-gemini-enterprise.jpg",
+        score: ""
+    },
+
+    // Databricks
+    {
+        title: "Databricks Fundamentals Certification",
+        issuer: "Databricks",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "",
+        domain: "Foundational",
+        platform: "Databricks",
+        category: "Technical",
+        image: "/certs/tech/databricks/databricks-fundamental-certification.jpg",
+        score: ""
+    },
+    {
+        title: "Databricks Fundamentals Accreditation",
+        issuer: "Databricks",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://credentials.databricks.com/83e80bb4-99cf-48c1-9683-82b963853da7#acc.paUhJ1QH",
+        domain: "Foundational",
+        platform: "Databricks",
+        category: "Technical",
+        image: "/certs/tech/databricks/databricks-fundmentals-accreditation.jpg",
         score: ""
     },
 
@@ -895,6 +946,20 @@ export const CERTIFICATIONS = [
         platform: "Udemy",
         category: "Technical",
         image: "/certs/tech/udemy/udemy-playwright-automation-testing.jpg",
+        score: ""
+    },
+    {
+        title: "Git: Branching and Merging",
+        issuer: "Udemy",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.udemy.com/certificate/UC-902588bc-e24a-4a2b-96ed-fb685363e0c3/",
+        domain: "Version Control",
+        platform: "Udemy",
+        category: "Technical",
+        image: "/certs/tech/udemy/udemy-git-branching-and-merging.jpg",
         score: ""
     },
 
