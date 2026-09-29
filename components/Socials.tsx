@@ -87,18 +87,24 @@ export default function Socials({
     className = "",
     itemClassName = "",
     featuredOnly = false,
-    ids
+    ids,
+    sortAlphabetically = false
 }: {
     className?: string,
     itemClassName?: string,
     featuredOnly?: boolean,
-    ids?: string[]
+    ids?: string[],
+    sortAlphabetically?: boolean
 }) {
-    const links = ids
+    const filtered = ids
         ? SOCIALS.filter(s => ids.includes(s.id))
         : featuredOnly
             ? SOCIALS.filter(s => s.featured)
             : SOCIALS;
+
+    const links = sortAlphabetically
+        ? [...filtered].sort((a, b) => a.name.localeCompare(b.name))
+        : filtered;
 
     const defaultItemClass = "bg-white/10 border border-white/20 text-gray-300 hover:text-white hover:bg-white/20 hover:border-white/40";
 
@@ -121,7 +127,7 @@ export default function Socials({
                             alt={`${link.name} logo`}
                             width={20}
                             height={20}
-                            className="w-5 h-5 object-contain"
+                            className={`w-5 h-5 object-contain ${'logoClassName' in link ? link.logoClassName : ''}`}
                         />
                     ) : (
                         Icons[link.id as keyof typeof Icons] || Icons.default

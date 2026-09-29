@@ -86,18 +86,12 @@ export const SOCIALS = [
         featured: false
     },
     {
-        id: "kaggle",
-        name: "Kaggle",
-        url: "https://www.kaggle.com/avianage",
-        featured: false,
-        logo: "/logos/certs-orgs/kaggle.png"
-    },
-    {
         id: "credly",
         name: "Credly",
         url: "https://www.credly.com/users/aakash-joshi.de1c40dd/badges/credly",
         featured: false,
-        logo: "/logos/certs-orgs/credly.png"
+        logo: "/logos/certs-orgs/credly.png",
+        logoClassName: "scale-150"
     },
     {
         id: "databricks",
@@ -105,6 +99,20 @@ export const SOCIALS = [
         url: "https://credentials.databricks.com/profile/avianage/wallet",
         featured: false,
         logo: "/logos/certs-orgs/databricks.png"
+    },
+    {
+        id: "google-skills",
+        name: "Google Skills",
+        url: "https://partner.skills.google/public_profiles/5b550f40-ee70-48c6-aada-9ec54df0b1aa",
+        featured: false,
+        logo: "/logos/certs-orgs/google-skills.png"
+    },
+    {
+        id: "kaggle",
+        name: "Kaggle",
+        url: "https://www.kaggle.com/avianage",
+        featured: false,
+        logo: "/logos/certs-orgs/kaggle.png"
     }
 ];
 
@@ -560,6 +568,20 @@ export const CERTIFICATIONS = [
         image: "/certs/tech/google-cloud/google-cloud-govern-agent-access-gemini-enterprise.jpg",
         score: ""
     },
+    {
+        title: "Build with Gemini",
+        issuer: "Google Cloud",
+        year: "2026",
+        month: "September",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.credly.com/badges/0e26c165-e08a-4aa3-8efd-92a2d7ef3cdf/public_url",
+        domain: "Artificial Intelligence",
+        platform: "Google Cloud",
+        category: "Technical",
+        image: "/certs/tech/google-cloud/google-cloud-build-with-gemini.jpg",
+        score: ""
+    },
 
     // Databricks
     {
@@ -688,6 +710,20 @@ export const CERTIFICATIONS = [
         platform: "IBM",
         category: "Technical",
         image: "/certs/tech/ibm/ibm-devsecops-explorer.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Growth Behaviors",
+        issuer: "IBM",
+        year: "2026",
+        month: "September",
+        expiryMonth: "September",
+        expiryYear: "2036",
+        link: "https://www.credly.com/badges/60f126a3-c04a-4f4d-93e0-91d0c4c7e180/public_url",
+        domain: "Professional Skills",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-growth-behaviors.jpg",
         score: ""
     },
 
