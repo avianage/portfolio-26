@@ -126,6 +126,7 @@ export const PROJECTS = [
         challenge: "Orchestrating services across multiple hardware nodes while maintaining secure remote access.",
         featured: true,
         github: "#",
+        live: "",
         image: "/projects/homelab.png",
         details: {
             overview: "Built a robust homelab using an old laptop (Proxmox hypervisor) and a dedicated server. Hosts a reverse proxy, password manager, NAS, media server (Jellyfin/Arr stack), and local LLMs.",
@@ -143,6 +144,7 @@ export const PROJECTS = [
         challenge: "Real-time pose estimation and feedback latency minimization.",
         featured: true,
         github: "https://github.com/avianage/zenkraft",
+        live: "",
         image: "/projects/zenkraft.png",
         details: {
             overview: "An AI-powered yoga assistant that provides real-time feedback on posture using computer vision. It features a complete frontend interface for course management and user progress tracking.",
@@ -160,6 +162,7 @@ export const PROJECTS = [
         challenge: "Synchronizing playback state across multiple clients in real-time.",
         featured: true,
         github: "https://github.com/avianage/echodeck",
+        live: "https://echodeck.avianage.in/",
         image: "/projects/echodeck.png",
         details: {
             overview: "A collaborative music platform allowing streamers to host parties where audiences can interact, upvote/downvote, and influence the playlist live.",
@@ -177,6 +180,7 @@ export const PROJECTS = [
         challenge: "Feature engineering for high-variance time-series data.",
         featured: true,
         github: "https://github.com/avianage/renewable-energy-demand-forcasting",
+        live: "",
         image: "/projects/energy-forecast.png",
         details: {
             overview: "A machine learning project to predict electricity demand based on historical energy data, comparing multiple models for optimal performance.",
@@ -194,6 +198,7 @@ export const PROJECTS = [
         challenge: "Accurately classifying subtle emotional nuances in text.",
         featured: false,
         github: "https://github.com/avianage/emotion-detection-classifier",
+        live: "",
         image: "/projects/sentimental-analysis.png",
         details: {
             overview: "Built an AI model to analyze textual data and accurately classify emotions such as sadness, joy, love, anger, fear, and surprise.",
@@ -211,6 +216,7 @@ export const PROJECTS = [
         challenge: "Handling large datasets and generating relevant recommendations efficiently.",
         featured: false,
         github: "https://github.com/avianage/movie-recommender-system",
+        live: "",
         image: "/projects/movie-recommender.png",
         details: {
             overview: "This system harnesses the power of the TMDB 5000 dataset to offer movie recommendations, detailed movie information, and an enjoyable movie discovery experience.",
@@ -410,6 +416,20 @@ export const CERTIFICATIONS = [
         category: "Technical",
         image: "/certs/tech/anthropic/anthropic-intro-mcp.jpg",
         score: ""
+    },
+    {
+        title: "Claude Certified Associate - Foundations",
+        issuer: "Anthropic",
+        year: "2026",
+        month: "October",
+        expiryMonth: "October",
+        expiryYear: "2027",
+        link: "https://www.credly.com/badges/3f1f8366-415c-45d2-ad95-30f63ddac9f7/public_url",
+        domain: "Claude Basics",
+        platform: "Anthropic",
+        category: "Technical",
+        image: "/certs/tech/anthropic/anthropic-claude-certified-associate-foundations.jpg",
+        score: "950/1000"
     },
     {
         title: "Claude Certified Developer - Foundations",

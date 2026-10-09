@@ -92,7 +92,7 @@ export default function Certifications({ items }: { items: CertItem[] }) {
                         </div>
 
                         <div className="flex justify-between items-center mt-auto pt-4 border-t border-white/5">
-                            <div className="flex items-center gap-2 flex-wrap">
+                            <div className="flex flex-col gap-1">
                                 <span className="text-xs font-mono text-zinc-500">{formatMonthYear(cert.month, cert.year)}</span>
                                 {(() => {
                                     const expiry = expiryStatus(cert.expiryMonth, cert.expiryYear);
@@ -102,28 +102,31 @@ export default function Certifications({ items }: { items: CertItem[] }) {
                                             Expired
                                         </span>
                                     ) : (
-                                        <span className="text-xs font-mono text-zinc-500">· {expiry.label}</span>
+                                        <span className="text-xs font-mono text-zinc-500">{expiry.label}</span>
                                     );
                                 })()}
                             </div>
-                            {cert.score && (
-                                <span className="text-xs font-semibold text-green-400/80 bg-green-400/10 px-2 py-0.5 rounded">
-                                    Score: {cert.score}
-                                </span>
-                            )}
-                            {cert.link && cert.link !== '#' && (
-                                <a
-                                    href={cert.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-xs text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
-                                >
-                                    Verify
-                                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
-                            )}
+                            <div className="flex items-center gap-3 shrink-0">
+                                {cert.score && (
+                                    <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-green-400 bg-green-400/10 border border-green-400/20 px-2.5 py-1 rounded-full">
+                                        <span className="text-green-400/60 font-medium">Score</span>
+                                        {cert.score}
+                                    </span>
+                                )}
+                                {cert.link && cert.link !== '#' && (
+                                    <a
+                                        href={cert.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
+                                    >
+                                        Verify
+                                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}
