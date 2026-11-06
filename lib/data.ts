@@ -460,6 +460,22 @@ export const CERTIFICATIONS = [
         score: ""
     },
 
+    // AWS
+    {
+        title: "AWS Certified AI Practitioner",
+        issuer: "Amazon Web Services",
+        year: "2026",
+        month: "November",
+        expiryMonth: "November",
+        expiryYear: "2029",
+        link: "https://www.credly.com/badges/5a8036dc-e803-4898-b3cf-1ca435278591/public_url",
+        domain: "Artificial Intelligence",
+        platform: "AWS",
+        category: "Technical",
+        image: "/certs/tech/aws/aws-certified-ai-practitioner.png",
+        score: "1000/1000"
+    },
+
     // Coursera
     {
         title: "Intro to Artificial Intelligence",
@@ -636,7 +652,7 @@ export const CERTIFICATIONS = [
     // IBM Learning
     {
         title: "IBM - Core Training 2026",
-        issuer: "IBM",
+        issuer: "IBM Learning",
         year: "2026",
         month: "June",
         expiryMonth: "",
@@ -720,7 +736,7 @@ export const CERTIFICATIONS = [
     },
     {
         title: "IBM - DevSecOps Explorer: Security & Automation for DevOps",
-        issuer: "IBM",
+        issuer: "IBM Learning",
         year: "2026",
         month: "September",
         expiryMonth: "",
@@ -734,7 +750,7 @@ export const CERTIFICATIONS = [
     },
     {
         title: "IBM - Growth Behaviors",
-        issuer: "IBM",
+        issuer: "IBM Learning",
         year: "2026",
         month: "September",
         expiryMonth: "September",
@@ -744,6 +760,20 @@ export const CERTIFICATIONS = [
         platform: "IBM",
         category: "Technical",
         image: "/certs/tech/ibm/ibm-growth-behaviors.jpg",
+        score: ""
+    },
+    {
+        title: "IBM - Basics of Quantum Information",
+        issuer: "IBM Learning",
+        year: "2026",
+        month: "October",
+        expiryMonth: "",
+        expiryYear: "",
+        link: "https://www.credly.com/badges/5f4ee6a6-59f4-4395-92d9-2dec4faca6d0/public_url",
+        domain: "Quantum Computing",
+        platform: "IBM",
+        category: "Technical",
+        image: "/certs/tech/ibm/ibm-basics-of-quantum-information.jpg",
         score: ""
     },
 
@@ -1081,7 +1111,7 @@ export const CERTIFICATIONS = [
     },
     {
         title: "Insurance Industry Jumpstart",
-        issuer: "IBM",
+        issuer: "IBM Learning",
         year: "2026",
         month: "September",
         expiryMonth: "",
@@ -1139,7 +1169,7 @@ export const CERTIFICATIONS = [
     },
     {
         title: "Banking Industry Financial Insight",
-        issuer: "IBM",
+        issuer: "IBM Learning",
         year: "2026",
         month: "September",
         expiryMonth: "",
@@ -1153,7 +1183,7 @@ export const CERTIFICATIONS = [
     },
     {
         title: "Banking Industry Jumpstart Badge",
-        issuer: "IBM",
+        issuer: "IBM Learning",
         year: "2026",
         month: "September",
         expiryMonth: "",
